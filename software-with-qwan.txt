@@ -1,0 +1,133 @@
+
+When I was learning how to program, I noticed that I frequently hit
+the same problem over and over again:  I would often write a program
+that worked reasonably well, but after some time of modifying it and
+enhancing it, I could no longer tweak it any further.  Either its
+complexity would overwhelm me, or it would be so tightly written that
+it allowed no room for expansion, like a house where you cannot build
+up because it has a sloping roof, and you cannot build to the sides
+because it has a wall all around it.
+
+As I got better, I learned to deal with complexity.  We all learn how
+to do that with various tools and techniques:  abstraction,
+encapsulation, object-orientation, functional techniques, etc.  We
+learn how various techniques let us write broader programs.
+
+However, the problem of having a program that was too tight to modify
+still persisted.  Sometimes I had what I thought was a beautiful
+design, but modifying it in any way would "break it" and I did not want
+that.  Other times I had something with so many interconnected parts,
+that I just could not plug anything else into it or the whole thing
+would fall down under its own weight.
+
+Some years ago the whole "Refactoring" craze started, but I did not
+pay much attention to it.  I said, sure, it is a way to clean up your
+code, but so what?  I already know how to take a chunk of code and
+turn it into a function; I already know how to take similar chunks of
+code and turn them into derived classes.  What's the big deal?
+
+I dismissed the "Refactoring" as something suited to less-experienced
+programmers; as some nice recipes for cleaning up your code, but nothing
+that you could live without.
+
+The same thing happened to me with "Design Patterns".  I thought they
+were just giving pompous names like Singleton and Strategy to the
+everyday kinds of structures one would naturally put in a program.
+
+Maybe my ego as a programmer was too inflated to consider those works
+seriously.  But then, something happened.
+
+At times, while browsing the web, I'll sometimes remember that I have
+seen the name of a certain author before, or the title of a book, or
+something like that.  I may have not really paid attention to it in
+the past, but somehow, the more times I see the same thing mentioned,
+the more likely it is that I will get interested enough in it to
+actually see what it is about.  "Oh, several people have already
+mentioned this name or this book; maybe I should check it out."
+
+That is just what happened with the name of Christopher Alexander.  I
+had read that he was a peculiar architect (of real-world buildings,
+not software), somehow connected to the software world.  As I started
+reading about his work, I became tremendously interested in it.  
+
+
+
+Alexander's work
+
+Sacar ideas de ~/Documents/Gnome/programming-guidelines.txt
+
+Sacar ideas del Foreword de Patterns of Software, por Alexander.
+
+
+Richard Gabriel applied Alexander's stuff to poetry - and it works!
+And to code as well.
+
+
+Intro to Alexander for object-oriented designers - http://gee.cs.oswego.edu/dl/ca/ca/ca.html
+
+
+
+Has all of this stuff let me do better work?
+Are my programs better as a result?
+
+
+It turns out that the authors of "Design Patterns" were directly
+inspired by Alexander's work.
+
+
+
+Not doing evidence-based design/construction is foolish.  Why?
+
+How do we avoid constant trial-and-error?
+
+How to use Alexander's work for software
+
+Where to learn more
+
+From http://bertrandmeyer.com/2010/07/30/empirical-software-engineering-the-good-news/
+
+	What triggered this radical change is the availability of
+        open-source repositories. Projects such as Linux, Eclipse,
+        Apache, EiffelStudio and many others have records going back
+        10, 15, sometimes 20 years. These records contain the true
+        history of the project: commits (into the configuration
+        management system), bug reports, bug fixes, test runs and
+        their results, developers involved, and many more elements of
+        project data. All of a sudden empirical research has what any
+        empirical science needs: a large corpus of objects to analyze.
+
+From http://bertrandmeyer.com/2010/07/31/the-rise-of-software-engineering-ii-what-we-are-still-missing/ 
+
+	One component of the experimental method is still not quite
+        there: reproducibility. It is essential to the soundness of
+        natural sciences; when you publish a result there, the
+        expectation is that others will be able to replicate it.
+
+As you build, you come to points in which you must make decisions.
+You can lay bricks in a row for a few minutes (or write code that
+"writes itself"), but then you need to make a decision.  This method
+lets you make the right decision, or *a* right decision.  CA
+calculated the number of mistakes in a building per unit volume.
+
+
+Whatever we teach [decide] should be falsifiable.
+
+
+"they reach the life of buildings, by a continuous unfolding process
+in which structure evolves almost continuously, under the criterion of
+emerging life, and does not stop until life is actually achieved.  The
+trick is, that this is accomplished with finite means, and without
+back-tracking." - from the foreword to Patterns of Software.
+
+
+What have you (FMQ) refactored with really good results?  Do you have
+the git log?
+
+
+Tight coupling, loose coupling.
+
+Hierarchy of components / hierarchy of scale.
+
+37signals - Notes on the Sythesis of Form
+
+La presentación de cómo diseñar una página de web.
