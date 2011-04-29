@@ -37,6 +37,8 @@ everyday kinds of structures one would naturally put in a program.
 Maybe my ego as a programmer was too inflated to consider those works
 seriously.  But then, something happened.
 
+Christopher Alexander's work
+
 At times, while browsing the web, I'll sometimes remember that I have
 seen the name of a certain author before, or the title of a book, or
 something like that.  I may have not really paid attention to it in
@@ -47,9 +49,432 @@ mentioned this name or this book; maybe I should check it out."
 
 That is just what happened with the name of Christopher Alexander.  I
 had read that he was a peculiar architect (of real-world buildings,
-not software), somehow connected to the software world.  As I started
-reading about his work, I became tremendously interested in it.  
+not software), somehow connected to the software world through
+object-oriented techniques.  As I started reading about his work, I
+became tremendously interested in it.
 
+At that exact time, my wife and I had recently bought a small,
+one-storey house and we wanted to expand it.  We were thinking of
+having a child, so we needed more space.  I needed a real home-office,
+not just a leftover alcove space where my desk and bookcases barely
+fit.  As avid cooks, we both needed a kitchen that was not as
+ridiculously small and uncomfortable as the one the house had.  My
+wife needed a Room Of Her Own.
+
+We hired an architect to design the expansion of the house, but we were
+not happy with his plan.  It seemed lifeless, overly expensive,
+uninspired.  Hold on to that thought, for I will come back to it a
+few paragraphs later.
+
+In the 1970s, Christopher Alexander was a mathematician/architect
+teaching at the University of California, Berkeley.  He and a group of
+like-minded architects went to various places around the world,
+ttrying to see if there were reasons for why there are human-built
+places in the world (cities, towns, parks, buildings, houses) where it
+is very pleasant to be, those that are comfortable, livable, and
+*nice*, and some places where this is not the case.  The pleasant
+places were present in all of the traditional architectures of the
+world - European, African, Asian, American - which pointed to the idea
+of being able to extract common factors from all of them.
+
+Alexander and his team distilled their findings into a list of good
+architectural patterns, and published three books:  "The Timeless Way
+of Building", where they describe the philosophy and method of good
+architecture; "A Pattern Language", which I'll describe next; and "The
+Oregon Experiment", where they detail the design and construction of a
+university campus with their method.
+
+A Pattern Language
+
+A *pattern* is a recurring problem when designing and building things,
+with a discussion of the forces that shape the problem, and with a
+solution that is in turn connected, almost recursively, to other
+super- or sub-patterns.  For example, let's consider the "INTIMACY
+GRADIENT", an important pattern in the book (patterns are spelled in
+capital letters throughout the book for easy identification; I'll do
+the same):
+
+INTIMACY GRADIENT
+
+Super-patterns and preamble:  ... if you know roughly where you intend
+to place the building wings - WINGS OF LIGHT, and how many stories
+they will have - NUMBER OF STORIES, and where the MAIN ENTRANCE is, it
+is time to work out the rough disposition of the major areas on every
+floor.  In every building the relationship between the public areas
+and private areas is most important.
+
+Statement of problem: Unless the spaces in a building are arranged in
+a sequence which corresponds to their degrees of privateness, the
+visits made by strangers, friends, guests, clients, family, will
+always be a little awkward.
+
+Discussion:  I will not quote all of it.  But for example, consider an
+apartment where you can only reach the bathroom by first crossing the
+bedroom.  Visits are always awkward because you feel like you need to
+tidy up your room first, if you intend your visitors to be able to use
+the WC!  Or in an office, you don't want your "quiet work space" to be
+right next to the reception, because then it will not be quiet at all.
+
+Summary of the solution: Lay out the spaces of a bulding so that they
+create a sequence which begins with the entrance and the most public
+parts of the building, then leads into the slightly more private
+areas, and finally to the most private domains.
+
+Sub-patterns to consult: COMMON AREAS AT THE HEART.  ENTRANCE ROOM for
+houses; A ROOM OF ONE'S OWN for individuals.  RECEPTION WELCOMES YOU
+for offices, HALF-PRIVATE OFFICE at the back.
+
+"A Pattern Language" is remarkable for several reasons.  First, it is
+immensely practical.  If you are building something, you can grab the
+book and instantly get hundreds of ideas for your project.  Second, it
+is not about a particular style or about superfluous decoration.  The
+book doesn't tell you, "make this shape of flourishes in the
+handrails"; instead it tells you, "a house should have its rooms
+placed such that sunlight enters them according to the right time of
+the day - East for the bedrooms in the morning, West for the living
+room in the afternoon".  Third, you can see a whole philosophy of good
+living emerge from the book.  It advocates a process that allows you
+to construct an environment that respects your needs as an individual,
+as a social human being, and as a living being that should not damage
+its environment.
+
+I had gotten a copy of "A Pattern Language" a little time after our
+uninspired architect delivered the plans for our house expansion.  It
+was a revelation:  *this* was the way to approach the design of our
+house, and now we could do it ourselves instead of paying a lot of
+money for an inadequate solution.
+
+The patterns get quite specific, but they never impose a style or an
+actual shape for the result.  For example, there is a pattern called
+OPEN SHELVES.  Deep cupboards make you put things behind other things,
+so you can't see them nor reach them.  They also have a big footprint.
+Cupboards that are one-item-deep automatically stay tidy, and you
+always know where everything is.  Things that you use frequently
+should not be behind doors.
+
+So you can see the essence of design patterns:  good, tested recipes
+that don't constrain your implementation in unnecessary ways.
+
+The Nature of Order
+
+Christopher Alexander knew that he had produced something valuable
+with his investigation and catalog of patterns, he was not completely
+satisfied.  Where had the patterns come from?  Could we make new
+patterns from scratch, or must be we content with what traditional
+architecture has produced so far?  Are patterns necessary at all?
+
+Alexander spent the next twenty years researching those questions.  He
+arrived at the following conclusions:
+
+* Nature creates things that all have about 15 properties in common
+(I'll show you later).  This happens solely through natural processes
+- standard physics and chemistry - although it is not quite clear why
+very different processes produce similar results.
+
+* Traditional architectures, or towns which just evolved over time,
+<em>also<em> have those properties.  You can derive all the patterns in
+"A Pattern Language" from those properties.
+
+* Each property can also describe a <em>transformation</em> to the
+existing space.
+
+* The only way to achieve good design is by using those
+transformations, one at a time.
+
+This was published in 2003-2004 in four volumes titled
+"The Nature of Order"
+
+	    <p>
+	      <strong>The fifteen properties</strong>
+	    </p>
+
+	    <p>
+	      The first book in <em>The Nature of Order</em> deals
+	      with fifteen properties that appear in all natural systems.
+	    </p>
+
+	    <p>
+	      You should really <a
+	      href="http://www.livingneighborhoods.org/ht-0/fifteen.htm">look
+	      at photos and drawings of the fifteen properties</a> to
+	      understand them.  I'll just summarize them super-briefly here.
+	    </p>
+
+	    <table frame="box" rules="all" cellpadding="10px">
+	      <tbody valign="top">
+		<tr>
+		  <td>
+		    <strong>Levels of scale.</strong>  There is a
+		    balanced range of sizes.  You don't have abrupt
+		    changes in the sizes of adjacent things.
+		  </td>
+		  <td>
+		    <strong>Strong centers.</strong>  You can clearly
+		    identify parts of the space or structure.
+		  </td>
+		  <td>
+		    <strong>Thick boundaries.</strong>  Lines delimit
+		    things.  In living systems, edges are the most
+		    productive environments (e.g. all the critters
+		    that live at the edge of the water).
+		  </td>
+		</tr>
+		<tr>
+		  <td>
+		    <strong>Alternating repetition.</strong>
+		    High/low, thick/thin, shape&nbsp;A and
+		    shape&nbsp;B.  Things oscillate.
+		  </td>
+		  <td>
+		    <strong>Positive space.</strong>  Space is
+		    beautifully shaped, convex, enclosed.  It is not
+		    leftover space.
+		  </td>
+		  <td>
+		    <strong>Good shape</strong>.  The sails of a ship,
+		    the shell of a snail, the beak of a bird.  They
+		    attain the optimal shape, which is beautiful.
+		  </td>
+		</tr>
+		<tr>
+		  <td>
+		    <strong>Local symmetries.</strong>  The world is
+		    not symmetrical at large.  But small things tend
+		    to be symmetrical, because it is easier that way.
+		    Your house is not symmetrical, but each window is.
+		  </td>
+		  <td>
+		    <strong>Deep interlock and ambiguity.</strong>
+		    The crooked streets of old towns.  Axons in
+		    neurons.  Two strong centers are made stronger if
+		    a third center is placed between them, so that it
+		    belongs to both.
+		  </td>
+		  <td>
+		    <strong>Contrast.</strong>  You can distinguish
+		    where one thing ends and the next one begins,
+		    because they don't fade into each other.
+		  </td>
+		</tr>
+		<tr>
+		  <td>
+		    <strong>Gradients.</strong>  Things fade into each
+		    other where they need to.  Concentrations in
+		    solutions, snow or earth banks, the wires that
+		    support a bridge.
+		  </td>
+		  <td>
+		    <strong>Roughness.</strong>  The world is not
+		    frictionless and smooth.  Irregularities are good.
+		  </td>
+		  <td>
+		    <strong>Echoes.</strong> Things repeat and echo
+		    each other.  Things are unique in their exact
+		    shape, but those shapes repeat over and over.
+		  </td>
+		</tr>
+		<tr>
+		  <td>
+		    <strong>The void.</strong>  Sometimes you get a
+		    big blank area for quietness of form.  A lake, a
+		    courtyard, a picture window.
+		  </td>
+		  <td>
+		    <strong>Simplicity and inner calm.</strong>
+		    Things are as simple as possible, but no simpler.
+		  </td>
+		  <td>
+		    <strong>Non-separateness.</strong> Everything
+		    depends on everything else.  You can't separate a
+		    fish from the pond and the aquatic plants.  You
+		    can't separate a column from the base of the
+		    building.
+		  </td>
+		</tr>
+	      </tbody>
+	    </table>
+
+	    <p>
+	      <strong>Structure-preserving transformations</strong>
+	    </p>
+
+	    <p>
+	      The second book in <em>The Nature of Order</em>
+	      describes how each of those properties also defines a
+	      transformation.  For example:
+	    </p>
+
+	    <p>
+	      <strong>Thick boundaries.</strong> You can sometimes
+	      transform something beneficially by <em>adding</em> a
+	      boundary to it.  You plant a hedge around a garden,
+	      which then serves as beauty, as a wind-break, and as a
+	      productive system on its own.  Scrollable boxes without
+	      a GTK_SHADOW_IN frame are hard to distinguish from the
+	      window's background.  You put a cornice at the top of a
+	      building, so you don't get an abrupt transition between
+	      the building and the sky.
+	    </p>
+
+	    <p>
+	      <strong>Local symmetries.</strong>  Small parts of built
+	      things are easier to build symmetrically &mdash; because
+	      they are turned on a lathe, because they need access
+	      from both sides, because they fold like a book.  Making
+	      things asymmetrical "just to be interesting" takes extra
+	      work and it is harder to make them work well.
+	    </p>
+
+	    <p>
+	      <strong>Positive space.</strong> Feeling too exposed
+	      when in your desk?  Add a waist-high bookshelf beside
+	      you to delimit your space, but not to completely close
+	      you off.
+	    </p>
+
+	    <p>
+	      Each of these is a
+	      <em>structure-preserving&nbsp;transformation</em>.  You
+	      make a change in the existing structure not by tearing
+	      it down and remaking it, but by tweaking one thing at a
+	      time according to those properties and transformations.
+	    </p>
+
+	    <p>
+	      <strong>The fundamental process</strong>
+	    </p>
+
+	    <p>
+	      Over a long argument, Alexander explains why following
+	      this process of applying structure-preserving
+	      transformations is the <em>only</em> way to achieve a
+	      good, functional design.  This is not just for
+	      buildings, but for everything we construct.  We mimic
+	      nature, but we do it faster.
+	    </p>
+
+	    <p>
+	      So, how do you do one step in your design/implementation
+	      process?
+	    </p>
+
+	    <p>
+	      1. Start with what you have &mdash; an empty lot, or an
+	      already-built building, or a program that looks ugly and
+	      is hard to use.
+	    </p>
+
+	    <p>
+	      2. Identify the centers that exist in that space.  Find
+	      the weakest center or the least coherent.
+	    </p>
+
+	    <p>
+	      3. See how to apply one or more of the fifteen
+	      structure-preserving transformations to strengthen that
+	      weak center.  Does it need to be delimited?  Does it
+	      need to be blended with its surroundings?  Does it need
+	      more detail?  Does it need to be de-cluttered?
+	    </p>
+
+	    <p>
+	      4. Find the new centers that are born when you apply the
+	      transformation to the old center.  Does the new
+	      combination make things stronger?  Prettier?  More functional?
+	    </p>
+
+	    <p>
+	      5. Ensure that you did the simplest possible thing.
+	    </p>
+
+	    <p>
+	      6. Go back to the beginning for the next step.
+	    </p>
+
+	    <p>
+	      A super-short summary could be, "find the bad parts;
+	      make them better in the simplest way possible; repeat
+	      until it is all good".
+	    </p>
+
+	    <p>
+	      <strong>What the hell does this have to do with software design?</strong>
+	    </p>
+
+	    <p>
+	      Let me give you some examples.
+	    </p>
+
+	    <p>
+	      <a
+	      href="http://en.wikipedia.org/wiki/Code_refactoring">Refactoring</a>
+	      is just applying structure-preserving transformations.
+	      You don't change what the program does; you just change
+	      how it is built internally, piece by piece.
+	    </p>
+
+	    <p>
+	      <a
+	      href="http://www.joelonsoftware.com/articles/fog0000000069.html">You
+	      do not rewrite software</a>; you fix the software that
+	      exists.  Otherwise you lose all that knowledge, even if
+	      it looks ugly in its curent state.
+	    </p>
+
+	    <p>
+	      You don't design the whole user interface for a big
+	      program in a single step.  You go from big to small or
+	      small to big (<strong>levels of scale</strong>); you
+	      test each part individually until it is good
+	      (<strong>strong centers</strong>); you make sure the
+	      parts are not too disconnected from each other
+	      (<strong>non-separateness</strong>).  You move a few
+	      widgets where they are easier to reach, or where they
+	      are closer to the data to which they refer.  You remove
+	      some frames and separators to reduce clutter.
+	    </p>
+
+	    <p>
+	      <strong>Free software and cities</strong>
+	    </p>
+
+	    <p>
+	      We software developers are building cities.  I include
+	      code hackers, designers, translators, documenters,
+	      etc. in the term "developers" &mdash; building cities of
+	      software programs interconnected with each other through
+	      IPC.  Each program is a building, large or small, simple
+	      or complex, each with a different purpose and layout.
+	    </p>
+
+	    <p>
+	      Designing a whole system (kernel, libraries, tools,
+	      shell, programs) would be like trying to design a whole city.
+	      <strong><a
+	      href="http://emergenturbanism.com/2009/03/23/the-journey-to-emergence/">A
+	      good city cannot be designed</a></strong>; it has to emerge from
+	      the interactions between its inhabitants, over many
+	      years.  Good cities are emergent, not designed.
+	      Ecosystems emerge from the interactions of living and
+	      non-living beings; they are not designed and they always
+	      evolve.
+	    </p>
+
+	    <p>
+	      Remember that no one can work on <em>all</em> of free
+	      software.  You cannot design a whole system by yourself, and you
+	      cannot make everyone agree on everything for a perfectly
+	      consistent design.  But if you follow the
+	      structure-preserving transformations and the fundamental
+	      process, you can build your part of a big system and it
+	      will automatically be harmonious with everything else
+	      &mdash; and you will have fixed the bad parts first,
+	      making the overall <em>goodness</em> much better.
+	    </p>
+
+	    <p>
+	      So, go forth and design and build and iterate.
+	    </p>
 
 
 Alexander's work
