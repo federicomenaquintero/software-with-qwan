@@ -1,3 +1,4 @@
+Software that has the Quality Without A Name
 
 When I was learning how to program, I noticed that I frequently hit
 the same problem over and over again:  I would often write a program
@@ -26,7 +27,7 @@ code, but so what?  I already know how to take a chunk of code and
 turn it into a function; I already know how to take similar chunks of
 code and turn them into derived classes.  What's the big deal?
 
-I dismissed the "Refactoring" as something suited to less-experienced
+I dismissed "Refactoring" as something suited to less-experienced
 programmers; as some nice recipes for cleaning up your code, but nothing
 that you could live without.
 
@@ -155,13 +156,24 @@ should not be behind doors.
 So you can see the essence of design patterns:  good, tested recipes
 that don't constrain your implementation in unnecessary ways.
 
+Much of Alexander's discussion around patterns and their philosophy is
+around something which he calls the "Quality Without A Name".  A thing
+or place has the quality without a name if it is comfortable, has
+evolved over time in its own terms, is free of inner contradictions,
+doesn't try to draw attention to itself and yet is beautiful, and
+seems to have archetypal qualities - like if it were *the* way that
+thing was supposed to be built.  This seems like a very vague
+definition, but that is as far as Alexander was able to take it during
+this first phase of his work.
+
 The Nature of Order
 
-Christopher Alexander knew that he had produced something valuable
+Although Christopher Alexander knew that he had produced something valuable
 with his investigation and catalog of patterns, he was not completely
 satisfied.  Where had the patterns come from?  Could we make new
 patterns from scratch, or must be we content with what traditional
-architecture has produced so far?  Are patterns necessary at all?
+architecture has produced so far?  Are patterns necessary at all?  How
+can we better define, and evaluate or measure, the quality without a name?
 
 Alexander spent the next twenty years researching those questions.  He
 arrived at the following conclusions:
@@ -184,21 +196,12 @@ transformations, one at a time.
 This was published in 2003-2004 in four volumes titled
 "The Nature of Order"
 
-	    <p>
-	      <strong>The fifteen properties</strong>
-	    </p>
+The fifteen properties
 
-	    <p>
-	      The first book in <em>The Nature of Order</em> deals
-	      with fifteen properties that appear in all natural systems.
-	    </p>
-
-	    <p>
-	      You should really <a
-	      href="http://www.livingneighborhoods.org/ht-0/fifteen.htm">look
-	      at photos and drawings of the fifteen properties</a> to
-	      understand them.  I'll just summarize them super-briefly here.
-	    </p>
+The first book in "The Nature of Order" deals
+with fifteen properties that appear in all natural systems.  I will
+summarize them very briefly; see the references for pictures and more
+extensive explanations.
 
 	    <table frame="box" rules="all" cellpadding="10px">
 	      <tbody valign="top">
@@ -723,3 +726,10 @@ that can tear it apart.
 
 
 Division of value:  objective (wholeness) and subjective (beauty) parts.
+
+
+References
+
+A Pattern Language
+
+Photos and drawings of the fifteen properties of life - http://www.livingneighborhoods.org/ht-0/fifteen.htm
