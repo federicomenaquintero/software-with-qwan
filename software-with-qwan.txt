@@ -170,22 +170,96 @@ knowledge in a compact form.
 
 Much of Alexander's discussion of patterns and their philosophy refers
 something which he calls the "Quality Without A Name".  You know
-places with the Quality Without A Name.  It is the coffee shop where
-you like to go to read, because the afternoon light hits it at just
-the right intensity, and there are comfortable seats and tables.  It
-is the corner in a park where a tree shades a bench, maybe there is
-some water running, and no matter if it rains or if it is sunny, it
-always seems to be a pleasure to be there.  Think of a Hobbit House,
-where everything is at hand, everything is comfortable, and everything
-is lovingly made.
+places with the Quality Without A Name.  It is present in the coffee
+shop where you like to go to read, because the afternoon light hits it
+at just the right intensity, and there are comfortable seats and
+tables, and somehow it always is packed with people and yet you don't
+feel overcrowded.  It is present in the corner in a park where a tree
+shades a bench, maybe there is some water running, and no matter if it
+rains or if it is sunny, it always seems to be a pleasure to be there.
+Think of a Hobbit House, where everything is at hand, everything is
+comfortable, and everything is lovingly made.
 
 A thing or place has the quality without a name if it is comfortable,
 has evolved over time in its own terms, is free of inner
 contradictions, doesn't try to draw attention to itself, and seems to
 have archetypal qualities - like if it were *the* way that thing was
-supposed to be built.  This seems like a very vague definition, but
-that is as far as Alexander was able to take it during this first
-phase of his work.  The real revelation would come later.
+supposed to be built.  Most importantly, Alexander asserted that this
+is an *objective* quality, not a subjective one, and that it can be
+measured and compared.  Although this seems like a very vague
+definition, that is as far as Alexander was able to take it during
+this first phase of his work.  The real revelation would come later.
+
+The ticket booth
+
+Alexander's PhD thesis, called "Notes on the Synthesis of Form", from
+1964, tried to mathematize design by defining it as a progression from
+a series of requirements to a final result, through an analysis of the
+forces that shaped the design.
+
+Let me quote Richard Gabriel, of whom I will talk more later, when he
+describes the time when Alexander was trying to design a ticket booth
+based on his mathematical ideas.
+
+"Alexander says [about the Quality Without A Name]:
+
+          It is a subtle kind of freedom from inner contradictions.
+          (Alexander 1979)
+
+"This statement reflects the origins of his inquiry into the
+quality. It started in 1964 when he was doing a study for the [San
+Francisco] Bay Area Rapid Transit (BART) system based on the work
+reported in Notes on the Synthesis of Form (Alexander 1964), which in
+turn was based on his Ph.D. dissertation. One of the key ideas in this
+book was that in a good design there must be an underlying
+correspondence between the structure of the problem and the structure
+of the solution - good design proceeds by writing down the
+requirements, analyzing their interactions on the basis of potential
+misfits, producing a hierarchical decomposition of the parts, and
+piecing together a structure whose
+
+	structural hierarchy is the exact counterpart of the functional hierarchy established during the analysis of the program. (Alexander 1964)
+
+"Alexander was studying the system of forces surrounding a ticket booth, and
+he and his group had written down 390 requirements for what ought to be happening near it. Some of them pertained to such things as being there to get tickets,
+being able to get change, being able to move past people waiting in line to get
+tickets, and not having to wait too long for tickets. What he noticed, though, was
+that certain parts of the system were not subject to these requirements and that
+the system itself could become bogged down because these other forces
+- forces not subject to control by requirements - acted to come to their own balance
+within the system. For example, if one person stopped and another also stopped
+to talk with the first, congestion could build up that would defeat the mechanisms
+designed to keep traffic flow smooth. Of course there was a requirement that
+there not be congestion, but there was nothing the designers could do to prevent
+this by means of a designed mechanism."
+
+As a programmer, does this sound familiar?  You can make a beautiful,
+thorough design, that crumbles down when you actually build it because
+*things emerge* that you did not anticipate.  This is not a failure of
+your design, but of something else!  Richard Gabriel goes on:
+
+"Alexander said this:
+
+	So it became clear that the free functioning of the system did
+	not purely depend on meeting a set of requirements. It had to
+	do, rather, with the system coming to terms with itself and
+	being in balance with the forces that were generated internal
+	to the system, not in accordance with some arbitrary set of
+	requirements we stated. I was very puzzled by this because the
+	general prevailing idea at the time [in 1964] was that
+	essentially everything was based on goals. My whole analysis
+	of requirements was certainly quite congruent with the operations research point of view that goals had to be stated and
+	so on.  What bothered me was that the correct analysis of the
+	ticket booth could not be based purely on one’s goals, that
+	there were realities emerging from the center of the system
+	itself and that whether you succeeded or not had to do with
+	whether you created a configuration that was stable with
+	respect to these realities. (Grabow 1983)"
+
+And that is the core of the problem:  how do you create a
+configuration that is stable with the realities that emerge from
+itself as you build it?
+
 
 The Nature of Order
 
