@@ -1,0 +1,250 @@
+
+
+
+Alexander's work
+
+Sacar ideas de ~/Documents/Gnome/programming-guidelines.txt
+
+Sacar ideas del Foreword de Patterns of Software, por Alexander.
+
+
+Richard Gabriel applied Alexander's stuff to poetry - and it works!
+And to code as well.
+
+
+Intro to Alexander for object-oriented designers - http://gee.cs.oswego.edu/dl/ca/ca/ca.html
+
+
+
+Has all of this stuff let me do better work?
+Are my programs better as a result?
+
+
+It turns out that the authors of "Design Patterns" were directly
+inspired by Alexander's work.
+
+
+
+Not doing evidence-based design/construction is foolish.  Why?
+
+How do we avoid constant trial-and-error?
+
+How to use Alexander's work for software
+
+Where to learn more
+
+From http://bertrandmeyer.com/2010/07/30/empirical-software-engineering-the-good-news/
+
+	What triggered this radical change is the availability of
+        open-source repositories. Projects such as Linux, Eclipse,
+        Apache, EiffelStudio and many others have records going back
+        10, 15, sometimes 20 years. These records contain the true
+        history of the project: commits (into the configuration
+        management system), bug reports, bug fixes, test runs and
+        their results, developers involved, and many more elements of
+        project data. All of a sudden empirical research has what any
+        empirical science needs: a large corpus of objects to analyze.
+
+From http://bertrandmeyer.com/2010/07/31/the-rise-of-software-engineering-ii-what-we-are-still-missing/ 
+
+	One component of the experimental method is still not quite
+        there: reproducibility. It is essential to the soundness of
+        natural sciences; when you publish a result there, the
+        expectation is that others will be able to replicate it.
+
+As you build, you come to points in which you must make decisions.
+You can lay bricks in a row for a few minutes (or write code that
+"writes itself"), but then you need to make a decision.  This method
+lets you make the right decision, or *a* right decision.  CA
+calculated the number of mistakes in a building per unit volume.
+
+
+Whatever we teach [decide] should be falsifiable.
+
+
+"they reach the life of buildings, by a continuous unfolding process
+in which structure evolves almost continuously, under the criterion of
+emerging life, and does not stop until life is actually achieved.  The
+trick is, that this is accomplished with finite means, and without
+back-tracking." - from the foreword to Patterns of Software.
+
+
+What have you (FMQ) refactored with really good results?  Do you have
+the git log?
+
+
+Tight coupling, loose coupling.
+
+Hierarchy of components / hierarchy of scale.
+
+37signals - Notes on the Sythesis of Form
+
+La presentación de cómo diseñar una página de web.
+
+
+Workspace enclosure - is that where they compiled statistics of what
+people liked and didn't?
+
+Traditional architectures *evolved* over hundreds or thousands of
+years.  Programming has not had such a long history yet.
+
+Design Patterns and Refactoring gave us a *vocabulary* for things we
+commonly do.  Just like architecture has its own vocabulary of beams,
+rafters, and joists, so do we now have vocabulary like a map-reduce
+process, an object factory, or a [refactoring term].
+
+We are building new kinds of software.  We are not building the "same"
+kind of bridge over and over again, wherever it is needed.  Software
+doesn't want such re-construction; we can just copy it if we need it
+again.  So it practically wants us to write new things all the time.
+So how do we go about that?
+
+Richard Gabriel in POS - "An image I like to use is that every large
+software project is similar to the first attempt to build a
+flying-buttress construction cathedral. Imagine how many of them
+collapsed before we figured out how to build them."
+
+
+"Habitability is the characteristic of source code that enables
+programmers, coders, bug-fixers, and people coming to the code later
+in its life to understand its construction and intentions and to
+change it comfortably and confidently. [...]  Habitability makes a
+place livable, like home. And this is what we want in soft- ware—that
+developers feel at home, can place their hands on any item without
+having to think deeply about where it is." [POS, p. 11]
+
+"Habitability is related to a concept called organic order that Christopher Alex-
+ander, the architect, uses in his work:
+         Organic Order: . . . the kind of order that is achieved when there is a
+         perfect balance between the needs of the parts and the needs of the
+         whole. (Alexander 1975)
+" [POS, p. 11]
+
+"Buildings like the Superdome [in New Orleans] lack habitability. In
+this instance people inhabit the building, but only for very short
+periods of time, and for very special occa- sions—and such buildings
+are not easily grown or altered. The Superdome is a static building,
+and therefore it can stand as a monument, being little else." [POS,
+p. 12] - Find picture of the superdome
+
+"    Contrast this with the New England farmhouse. It starts as a small home with
+a barn out back. As the family grows and the needs of the farm grow, a back room
+is added to the house, then a canning room, then a room for grandma; stables are
+added to the barn, then a wing for milking more cows. Finally the house and barn
+are connected because it is too difficult to get from the house to the barn in a bliz-
+zard. The result is rambling, but each part is well-suited to its needs, each part fits
+well with the others, and the result is beautiful because it is a living structure with
+living people inside. The inhabitants are able to modify their environment
+because each part is built according to familiar patterns of design, use, and con-
+struction and because those patterns contain the seeds for piecemeal
+growth." [POS, p. 12] - Find picture of a New England farmhouse
+
+"In Alexander’s definition of organic order applied to software, the
+concept of “needs of the whole” refers to the grand design or
+architecture of the piece of soft- ware under development, and “needs
+of the parts” refers to the inevitable changes the various parts of
+the software undergo. It’s difficult to change the grand design of
+software: You cannot expect to evolve a window system into a
+spreadsheet.  Although the primary need of the whole is to remain true
+to its essence, the parts often must change. For instance, one sort of
+window system could evolve into another." [POS, p. 12]
+
+"Software needs to be habitable because it always has to
+change. Software is sub- ject to unpredictable events: Requirements
+change because the marketplace changes, competitors change, parts of
+the design are shown wrong by experience, people learn to use the
+software in ways not anticipated. Notice that frequently the
+unpredictable event is about people and society rather than about
+technical issues. Such unpredictable events lead to the needs of the
+parts which must be comfortably understood so they can be comfortably
+changed." [POS, p. 13]
+
+"    Consider bugs. Many a bug is the result of not anticipating a particular event
+or use and is not the result of a mistake—bugs are not always errors. Bugs tell us
+that we are not capable of producing a master plan. A master plan is a detailed
+design, and many projects consider critical their detailed designs. But a master
+plan is usually not possible, especially for extensive, long-lived software. Alex-
+ander writes:
+          It is simply not possible to fix today what the environment should be
+          like [in the future], and then to steer the piecemeal process of devel-
+          opment toward that fixed, imaginary world. (Alexander 1975)
+    This simply acknowledges that it is impossible to predict the circumstances of
+a long-lived program. But there is a more important point:
+          Master plans have two additional unhealthy characteristics. To begin
+          with, the existence of a master plan alienates the users. . . . After all,
+          the very existence of a master plan means, by definition, that the
+          members of the community can have little impact on the future shape
+          of their community, because most of the important decisions have
+          already been made. In a sense, under a master plan people are living
+          with a frozen future, able to aff ect only relatively trivial details.
+          When people lose the sense of responsibility for the environment they
+          live in, and realize that there are merely cogs in someone else’s
+          machine, how can they feel any sense of identification with the com-
+          munity, or any sense of purpose there?
+              Second, neither the users nor the key decision makers can visualize
+          the actual implications of the master plan. (Alexander 1975)
+" [POS, p. 13]
+
+"As I said earlier, a New England farmhouse is habitable, and the new
+owner feels just as comfortable changing or adapting that farmhouse as
+the first farmer was. But a home designed by Frank Lloyd Wright—though
+more hab- itable than most “overdesigned” homes—cannot be altered
+because all its parts are too rigidly designed and built. The needs of
+the whole have overshadowed the needs of the parts and the needs of
+the inhabitants." [POS, p. 14] - Find pictures of Fallingwater and such.
+
+"The principle of organic order: Planning and construction [imple-
+mentation, in our context] will be guided by a process which allows
+the whole to emerge gradually from local acts. (Alexander 1975)" [POS,
+p. 14]
+
+"[...] there are very few completed programs, because programs are written,
+maintained, bugs are fixed, features are added, performance is tuned,
+and a whole variety of changes are made both by the original and new
+programming team members. Thus, the way a program looks in the end is
+not important because there is rarely an end, and if there is one it
+isn’t planned.  " [POS, p. 15]
+
+"If the beauty of the code gets in the way, the program is not well
+written, just as an office building designed to win design awards is
+not well designed when the building later must undergo changes but
+those changes are too hard to make.  " [POS, p. 15]
+
+"The danger of clarity is that it is uncompromised beauty; and it’s
+real tough to to improve uncompromised beauty. Many second- and
+third-rate sculptors can fix a decent sculpture—I saw a group of them
+one summer making replacement gargoyles for Notre Dame Cathedral in
+Paris—but which of them would dare repair Michelangelo’s David? Who
+would add a skyscraper to the background of Mona Lisa? Who would edit
+Eliot’s poems? Clarity is dangerous." [POS, p. 16]
+
+The ticket booth example - POS, p. 35 (see the following, plus the
+text before it):
+
+	So it became clear that the free functioning of the system did
+	not purely depend on meeting a set of requirements. It had to
+	do, rather, with the system coming to terms with itself and
+	being in balance with the forces that were generated internal
+	to the system, not in accor- dance with some arbitrary set of
+	requirements we stated. I was very puzzled by this because the
+	general prevailing idea at the time [in 1964] was that
+	essentially everything was based on goals. My whole analysis
+	of requirements was certainly quite congruent with the oper-
+	ations research point of view that goals had to be stated and
+	so on.  What bothered me was that the correct analysis of the
+	ticket booth could not be based purely on one’s goals, that
+	there were realities emerging from the center of the system
+	itself and that whether you succeeded or not had to do with
+	whether you created a configuration that was stable with
+	respect to these realities. (Grabow 1983)
+
+Quality without a name: alive, whole, comfortable, free, exact,
+egoless, and eternal. (POS, p. 36 - look from there for the
+definitions)
+
+A system subtly free from internal contradictions, or inner forces
+that can tear it apart.  
+
+
+Division of value:  objective (wholeness) and subjective (beauty) parts.
+
