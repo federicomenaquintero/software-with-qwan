@@ -2,34 +2,35 @@ Software that has the Quality Without A Name
 
 When I was learning how to program, I noticed that I frequently hit
 the same problem over and over again:  I would often write a program
-that worked reasonably well, but after some time of modifying it and
-enhancing it, I could no longer tweak it any further.  Either its
-complexity would overwhelm me, or it would be so tightly written that
-it allowed no room for expansion, like a house where you cannot build
-up because it has a sloping roof, and you cannot build to the sides
-because it has a wall all around it.
+that worked reasonably well, and even had a good structure, but after
+some time of modifying it and enhancing it, I could no longer tweak it
+any further.  Either its complexity would overwhelm me, or it would be
+so tightly written that it allowed no room for expansion, like a house
+where you cannot build up because it has a sloping roof, and you
+cannot build to the sides because it has a wall all around it.
 
 As I got better, I learned to deal with complexity.  We all learn how
 to do that with various tools and techniques:  abstraction,
 encapsulation, object-orientation, functional techniques, etc.  We
 learn how various techniques let us write broader programs.
 
-However, the problem of having a program that was too tight to modify
-still persisted.  Sometimes I had what I thought was a beautiful
-design, but modifying it in any way would "break it" and I did not want
-that.  Other times I had something with so many interconnected parts,
-that I just could not plug anything else into it or the whole thing
-would fall down under its own weight.
+However, the problem of having a program that was too tight or too
+intertwined to modify still persisted.  Sometimes I had what I thought
+was a beautiful design, but modifying it in any way would "make it uglier"
+and I did not want that.  Other times I had something with so many
+interconnected parts, that I just could not plug anything else into it
+or the whole thing would fall down under its own weight.
 
 Some years ago the whole "Refactoring" craze started, but I did not
 pay much attention to it.  I said, sure, it is a way to clean up your
 code, but so what?  I already know how to take a chunk of code and
 turn it into a function; I already know how to take similar chunks of
-code and turn them into derived classes.  What's the big deal?
+code and turn them into derived classes.  I already know how to write
+mostly-clean code.  What's the big deal?
 
 I dismissed "Refactoring" as something suited to less-experienced
 programmers; as some nice recipes for cleaning up your code, but nothing
-that you could live without.
+that you could not discover yourself.
 
 The same thing happened to me with "Design Patterns".  I thought they
 were just giving pompous names like Singleton and Strategy to the
@@ -39,6 +40,16 @@ Maybe my ego as a programmer was too inflated to consider those works
 seriously.  But then, something happened.
 
 Christopher Alexander's work
+
+Some years ago, my wife and I bought a small, one-storey house and we
+wanted to expand it.  We were thinking of having a child, so we needed
+more space.  I needed a real home-office, not just a leftover alcove
+where my desk and bookcases barely fit.  As avid cooks, we both needed
+a kitchen that was larger and more comfortable the one the house had.
+My wife needed a Room Of Her Own.
+
+We did not want to pay for an expensive architect, and neither of us
+knew anything about construction.  How would we design our house?
 
 At times, while browsing the web, I'll sometimes remember that I have
 seen the name of a certain author before, or the title of a book, or
@@ -54,20 +65,10 @@ not software), somehow connected to the software world through
 object-oriented techniques.  As I started reading about his work, I
 became tremendously interested in it.
 
-At that exact time, my wife and I had recently bought a small,
-one-storey house and we wanted to expand it.  We were thinking of
-having a child, so we needed more space.  I needed a real home-office,
-not just a leftover alcove where my desk and bookcases barely fit.  As
-avid cooks, we both needed a kitchen that was larger and more
-comfortable the one the house had.  My wife needed a Room Of Her Own.
-
-We did not want to pay for an expensive architect, and neither of us
-knew anything about construction.  How would we design our house?
-
 In the 1970s, Christopher Alexander was a mathematician/architect
 teaching at the University of California, Berkeley.  He and a group of
 like-minded architects went to various places around the world,
-ttrying to see if there were reasons for why there are human-built
+trying to see if there were reasons for why there are human-built
 places in the world (cities, towns, parks, buildings, houses) where it
 is very pleasant to be, those that are comfortable, livable, and
 *nice*, and some places where this is not the case.  The pleasant
@@ -89,7 +90,7 @@ with a discussion of the forces that shape the problem, and with a
 solution that is in turn connected, almost recursively, to other
 super- or sub-patterns.  For example, let's consider the "INTIMACY
 GRADIENT", an important pattern in the book (patterns are spelled in
-capital letters throughout the book for easy identification; I'll do
+capital letters throughout the book for easy identification, so I will do
 the same):
 
 INTIMACY GRADIENT
@@ -110,9 +111,9 @@ Discussion:  I will not quote all of it.  But for example, consider an
 apartment where you can only reach the bathroom by first crossing the
 bedroom.  Visits are always awkward because you feel like you need to
 tidy up your room first, if you intend your visitors to be able to use
-the WC!  Or in an office, you don't want a "quiet work space" to be
-right next to the reception, because then it will not be quiet at all
-- you want it to be more private, towards the back.
+the WC!  Or consider an office, where you don't want a "quiet work
+space" to be right next to the reception, because then it will not be
+quiet at all - you want it to be more private, towards the back.
 
 Summary of the solution: Lay out the spaces of a bulding so that they
 create a sequence which begins with the entrance and the most public
@@ -123,25 +124,6 @@ Sub-patterns to consult: COMMON AREAS AT THE HEART.  ENTRANCE ROOM for
 houses; A ROOM OF ONE'S OWN for individuals.  RECEPTION WELCOMES YOU
 for offices, HALF-PRIVATE OFFICE at the back.
 
-"A Pattern Language" is remarkable for several reasons.  First, it is
-immensely practical.  If you are building something, you can grab the
-book and instantly get hundreds of ideas for your project.  Second, it
-is not about a particular style or about superfluous decoration.  The
-book doesn't tell you, "make this shape of flourishes in the
-handrails"; instead it tells you, "a house should have its rooms
-placed such that sunlight enters them according to the right time of
-the day - East for the bedrooms in the morning, West for the living
-room in the afternoon".  Third, you can see a whole philosophy of good
-living emerge from the book.  It advocates a process that allows you
-to construct an environment that respects your needs as an individual,
-as a social human being, and as a living being that should not damage
-its environment.
-
-I had gotten a copy of "A Pattern Language" shortly before starting
-the expansion of our house.  The book was a revelation:  *this* was
-the way to approach the design of our house, and now we could do it
-ourselves instead of paying a lot of money for an inadequate solution.
-
 The patterns get quite specific, but they never impose a style or an
 actual shape for the result.  For example, there is a pattern called
 OPEN SHELVES.  Deep cupboards make you put things behind other things,
@@ -151,7 +133,24 @@ always know at a glance where everything is.  Things that you use
 frequently should not be behind doors.
 
 So you can see the essence of design patterns:  good, tested recipes
-that don't constrain your implementation in unnecessary ways.
+that don't constrain your implementation in unnecessary ways.  The
+patterns do not mandate a particular style, nor include superfluous
+decorations:  the book doesn't tell you, "make this shape of
+flourishes in the handrails"; instead it tells you, "a house should
+have its rooms placed such that sunlight enters them according to the
+time of the day in which they are most used - East for the bedrooms in
+the morning, West for the living room in the afternoon".
+
+I had gotten a copy of "A Pattern Language" shortly before starting
+the expansion of our house.  The book was a revelation:  *this* was
+the way to approach the design of our house, and now we could do it
+ourselves instead of paying a lot of money for an inadequate
+solution.  We were able to make up a rough plan for our house, and then
+figure out smaller details as the construction went on.  This is the
+kind of book that, as you read it, manages to confirm intuitive ideas
+that you half-knew you had - the kind of book where you find yourself
+saying, "of course, this is completely how I thought it should be" all
+the time.
 
 "Design Patterns", the well-known book by Gamma et al, took direct
 inspiration from Alexander's architectural patterns.  They wanted to
@@ -159,14 +158,16 @@ do the same thing:  to make a list of problems that appear frequently
 when programming, and to present good solutions for them, that
 wouldn't constrain your implementation unnecessarily.
 
-One thing that I realized until much later - a valuable thing from
-either list of patterns, the architectural or the software one, is
-that it gives us a *vocabulary* to talk about how things are
-constructed.  It is much more convenient to say, "this object has
-listeners for its properties", than "this object lets you hook
-callback functions that are called when its properties change".  What
-I thought were only pompous names, are in fact ways to express
+One thing that I realized while reading "A Pattern Language" - a
+valuable thing from both lists of patterns, the architectural and the
+software one, is that they give us a *vocabulary* to talk about how
+things are constructed.  It is much more convenient to say, "this
+object has listeners for its properties", than "this object lets you
+hook callback functions that are called when its properties change".
+What I thought were only pompous names, are in fact ways to express
 knowledge in a compact form.
+
+The Quality Without A Name
 
 Much of Alexander's discussion of patterns and their philosophy refers
 something which he calls the "Quality Without A Name".  You know
@@ -190,12 +191,23 @@ measured and compared.  Although this seems like a very vague
 definition, that is as far as Alexander was able to take it during
 this first phase of his work.  The real revelation would come later.
 
+As programmers, we have all seen beautiful programs at some point.
+Maybe they are the examples in "Programming Pearls", a beautiful book
+which every hacker should read.  Maybe you have seen a beautifully
+implemented algorithm that exudes *rightness*.  Maybe you remember a
+very compact, very legible, very functional, very correct piece of
+code.  That software has the Quality Without A Name.
+
+It became clear to me that I had to learn to write software that
+attained the Quality Without A Name, and Alexander's frame of mind was
+the right starting point for this.
+
 The ticket booth
 
-Alexander's PhD thesis, called "Notes on the Synthesis of Form", from
-1964, tried to mathematize design by defining it as a progression from
-a series of requirements to a final result, through an analysis of the
-forces that shaped the design.
+Alexander's PhD dissertation, which was the basis for his book "Notes on the
+Synthesis of Form" from 1964, tried to mathematize design by defining
+it as a progression from a series of requirements to a final result,
+through an analysis of the forces that shaped the design.
 
 Let me quote Richard Gabriel, of whom I will talk more later, when he
 describes the time when Alexander was trying to design a ticket booth
@@ -254,7 +266,7 @@ your design, but of something else!  Richard Gabriel goes on:
 	there were realities emerging from the center of the system
 	itself and that whether you succeeded or not had to do with
 	whether you created a configuration that was stable with
-	respect to these realities. (Grabow 1983)"
+	respect to these realities."
 
 And that is the core of the problem:  how do you create a
 configuration that is stable with the realities that emerge from
@@ -273,11 +285,11 @@ can we better define, and evaluate or measure, the Quality Without A Name?
 Alexander spent the next twenty years researching those questions.  By
 studying the actual *process* by which good built environments had
 been created, he discovered that processes of a certain kind are
-essential to creating good towns, or buildings, or any man-made thing.
-He arrived at the following conclusions:
+essential to creating good towns, or buildings, or any man-made thing
+in fact.  He arrived at the following conclusions:
 
 * Nature creates things that all have about 15 properties in common
-(I'll show you later).  This happens solely through natural processes
+(I will show you later).  This happens solely through natural processes
 - standard physics and chemistry - although it is not quite clear why
 very different processes produce similar results.
 
@@ -438,11 +450,15 @@ You make a change in the existing structure not by tearing it down and
 remaking it, but by tweaking one thing at a time according to those
 properties as transformations.
 
-It turns out that this is what much of "Refactoring" is about, when
-you translate the concepts to code.  Refactoring is just applying
-structure-preserving transformations.  You don't change what the
+In software terms, it turns out that this is what much of
+"Refactoring" is about, when you translate the concepts to code.
+Refactoring is just applying structure-preserving transformations, or
+as Martin Fowler (the author of "Refactoring") would put it,
+behavior-preserving transformations.  You don't change what the
 program does; you just change how it is built internally, piece by
-piece.  By extracting a chunk of code and putting it in a function
+piece.
+
+By extracting a chunk of code and putting it in a function
 with a name, you are essentially adding a thick boundary around that
 code, and creating a strong center.  By removing a global variable and
 adding class variables, you are allowing for roughness, as every
@@ -481,8 +497,7 @@ improves the local symmetries, retains deep interlock and ambiguity,
 5. Yes, composable.
 
 Multi-way calls, conference calls, happen all out of applying
-structure-preserving transformations.  Make your structure prettier,
-and the whole design becomes better and more functional.
+structure-preserving transformations.
 
 Probably every programmer keeps a mental picture of the program he is
 creating or modifying - the hard part of modifying code that you
@@ -497,10 +512,10 @@ applying structure-preserving transformations is the <em>only</em> way
 to achieve a good, functional design.  This is not just for buildings,
 but for everything we construct.  It does not matter if you start with
 an existing program or building or city, or whether you are starting
-from scratch.  We mimic nature's own evolutions and regenerations, but
-we do it faster.
+from scratch.  We mimic nature's own evolutions and regenerative
+processes, but we do it faster.
 
-1. Start with what you have &mdash; an empty lot, or an
+1. Start with what you have - an empty lot, or an
 already-built building, or a program that looks ugly and
 is hard to use.
 
@@ -520,12 +535,16 @@ things stronger?  Prettier?  More functional?
 
 6. Go back to the beginning for the next step.
 
-Alexander is not keen on destroying things just to rebuild them.  You
-shouldn't demolish part of a town to rebuild it; you should improve it
-gradually.  In software, it is well-known that you shouldn't rewrite
-things just because you don't understand them anymore.  Tearing things
-down makes you lose all the knowledge you had embodied in the thing
-you are destroying, even if it looks ugly in its current state.
+A super-simple summary would be:  find the bad parts, make them better
+in the simplest way possible, test the results, iterate.
+
+Alexander is not keen on destroying things just to rebuild them in a
+different way.  You shouldn't demolish part of a town to rebuild it;
+you should improve it gradually.  In software, it is well-known that
+you shouldn't rewrite things just because you don't understand them
+anymore.  Tearing things down makes you lose all the knowledge you had
+embodied in the thing you are destroying, even if it looks ugly in its
+current state.
 
 Similarly, Alexander is against making detailed, up-front designs.  He
 gives a good argument of why pre-made designs can't work well in the
@@ -535,47 +554,44 @@ details of the environment into which your creation will live; because
 Nature itself isn't pre-ordained, and rather it grows organically and
 mercilessly evolves things until they manage to survive by themselves.
 
-In this fashion, you don't design the whole user interface for a big
-program in a single step.  You go from big to small or small to big
-(<strong>levels of scale</strong>); you test each part individually
-until it is good (<strong>strong centers</strong>); you make sure the
-parts are not too disconnected from each other
-(<strong>non-separateness</strong>).  You move a few widgets where
-they are easier to reach, or where they are closer to the data to
-which they refer.  You remove some frames and separators to reduce
-clutter.  Above all, you continually evaluate what you created against
-real users and real use cases, so that you empirically test things
-against reality, not against castles in the sky.
+In this fashion, you don't design the whole user interface, or the
+whole structure, for a big program in a single step.  You go from big
+to small or small to big (<strong>levels of scale</strong>); you test
+each part individually until it is good (<strong>strong
+centers</strong>); you make sure the parts are not too disconnected
+from each other (<strong>non-separateness</strong>).  You move a few
+widgets where they are easier to reach, or where they are closer to
+the data to which they refer.  You remove some frames and separators
+to reduce clutter.  Above all, you continually evaluate what you
+created against real users and real use cases, so that you empirically
+test things against reality, not against castles in the sky.
 
-Free software and cities
+A Name for the Quality
 
-We software developers are building cities.  I include code hackers,
-visual designers, translators, documenters, etc. in the term "developers"
-&mdash; building cities of software programs interconnected with each
-other through IPC.  Each program is a building, large or small, simple
-or complex, each with a different purpose and layout.
+Over the course of "The Nature of Order", Alexander manages to show
+that environments or structures that are built according to that
+method all end up having the Quality Without A Name.  He calls this
+*living structure*.  It can be measured and compared.  It no longer
+has no name; we can now speak of environments with more or less living
+structure than others, or of programs with more or less living
+structure than others - and we strive to make have more of that
+property.
 
-Designing a whole system (kernel, libraries, tools, shell, programs)
-would be like trying to design a whole city.  <strong><a
-href="http://emergenturbanism.com/2009/03/23/the-journey-to-emergence/">A
-good city cannot be designed</a></strong>; it has to emerge from the
-interactions between its inhabitants, over many years.  Good cities
-are emergent, not designed.  Ecosystems emerge from the interactions
-of living and non-living beings; they are not designed and they always
-evolve.
+I just called this essay, "Software that has the Quality Without A
+Name" because it sounds more mysterious that way.
 
-Remember that no one can work on <em>all</em> of free software.  You
-cannot design a whole system by yourself, and you cannot make everyone
-agree on everything for a perfectly consistent design.  But if you
-follow the structure-preserving transformations and the fundamental
-process, you can build your part of a big system and it will
-automatically be harmonious with what surrounds it &mdash; and you will
-have fixed the bad parts first, making the overall <em>goodness</em>
-much better.
+I cannot claim to know the perfect way of designing and writing
+software now, but at least I have a good method grounded on what
+produces good things elsewhere.  It worked for my house, and so far I
+have seen it work very well for my software.  I hope it works well for
+you, too!
+
 
 References
 
 A Pattern Language
+
+The Nature of Order
 
 Photos and drawings of the fifteen properties of life - http://www.livingneighborhoods.org/ht-0/fifteen.htm
 
