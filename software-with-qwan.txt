@@ -57,15 +57,12 @@ became tremendously interested in it.
 At that exact time, my wife and I had recently bought a small,
 one-storey house and we wanted to expand it.  We were thinking of
 having a child, so we needed more space.  I needed a real home-office,
-not just a leftover alcove space where my desk and bookcases barely
-fit.  As avid cooks, we both needed a kitchen that was not as
-ridiculously small and uncomfortable as the one the house had.  My
-wife needed a Room Of Her Own.
+not just a leftover alcove where my desk and bookcases barely fit.  As
+avid cooks, we both needed a kitchen that was larger and more
+comfortable the one the house had.  My wife needed a Room Of Her Own.
 
-We hired an architect to design the expansion of the house, but we were
-not happy with his plan.  It seemed lifeless, overly expensive,
-uninspired.  Hold on to that thought, for I will come back to it a
-few paragraphs later.
+We did not want to pay for an expensive architect, and neither of us
+knew anything about construction.  How would we design our house?
 
 In the 1970s, Christopher Alexander was a mathematician/architect
 teaching at the University of California, Berkeley.  He and a group of
@@ -113,8 +110,9 @@ Discussion:  I will not quote all of it.  But for example, consider an
 apartment where you can only reach the bathroom by first crossing the
 bedroom.  Visits are always awkward because you feel like you need to
 tidy up your room first, if you intend your visitors to be able to use
-the WC!  Or in an office, you don't want your "quiet work space" to be
-right next to the reception, because then it will not be quiet at all.
+the WC!  Or in an office, you don't want a "quiet work space" to be
+right next to the reception, because then it will not be quiet at all
+- you want it to be more private, towards the back.
 
 Summary of the solution: Lay out the spaces of a bulding so that they
 create a sequence which begins with the entrance and the most public
@@ -139,19 +137,18 @@ to construct an environment that respects your needs as an individual,
 as a social human being, and as a living being that should not damage
 its environment.
 
-I had gotten a copy of "A Pattern Language" a little time after our
-uninspired architect delivered the plans for our house expansion.  It
-was a revelation:  *this* was the way to approach the design of our
-house, and now we could do it ourselves instead of paying a lot of
-money for an inadequate solution.
+I had gotten a copy of "A Pattern Language" shortly before starting
+the expansion of our house.  The book was a revelation:  *this* was
+the way to approach the design of our house, and now we could do it
+ourselves instead of paying a lot of money for an inadequate solution.
 
 The patterns get quite specific, but they never impose a style or an
 actual shape for the result.  For example, there is a pattern called
 OPEN SHELVES.  Deep cupboards make you put things behind other things,
 so you can't see them nor reach them.  They also have a big footprint.
 Cupboards that are one-item-deep automatically stay tidy, and you
-always know where everything is.  Things that you use frequently
-should not be behind doors.
+always know at a glance where everything is.  Things that you use
+frequently should not be behind doors.
 
 So you can see the essence of design patterns:  good, tested recipes
 that don't constrain your implementation in unnecessary ways.
@@ -162,22 +159,33 @@ do the same thing:  to make a list of problems that appear frequently
 when programming, and to present good solutions for them, that
 wouldn't constrain your implementation unnecessarily.
 
-A valuable thing from either list of patterns, the architectural or
-the software one, is that it gives us a *vocabulary* to talk about how
-things are constructed.  It is much more convenient to say, "this
-object has listeners for its properties", than "this object lets you
-hook callback functions that are called when its properties change".
-What I thought were only pompous names, are in fact ways to express
+One thing that I realized until much later - a valuable thing from
+either list of patterns, the architectural or the software one, is
+that it gives us a *vocabulary* to talk about how things are
+constructed.  It is much more convenient to say, "this object has
+listeners for its properties", than "this object lets you hook
+callback functions that are called when its properties change".  What
+I thought were only pompous names, are in fact ways to express
 knowledge in a compact form.
 
 Much of Alexander's discussion of patterns and their philosophy refers
-something which he calls the "Quality Without A Name".  A thing or
-place has the quality without a name if it is comfortable, has evolved
-over time in its own terms, is free of inner contradictions, doesn't
-try to draw attention to itself, and seems to have archetypal
-qualities - like if it were *the* way that thing was supposed to be
-built.  This seems like a very vague definition, but that is as far as
-Alexander was able to take it during this first phase of his work.
+something which he calls the "Quality Without A Name".  You know
+places with the Quality Without A Name.  It is the coffee shop where
+you like to go to read, because the afternoon light hits it at just
+the right intensity, and there are comfortable seats and tables.  It
+is the corner in a park where a tree shades a bench, maybe there is
+some water running, and no matter if it rains or if it is sunny, it
+always seems to be a pleasure to be there.  Think of a Hobbit House,
+where everything is at hand, everything is comfortable, and everything
+is lovingly made.
+
+A thing or place has the quality without a name if it is comfortable,
+has evolved over time in its own terms, is free of inner
+contradictions, doesn't try to draw attention to itself, and seems to
+have archetypal qualities - like if it were *the* way that thing was
+supposed to be built.  This seems like a very vague definition, but
+that is as far as Alexander was able to take it during this first
+phase of his work.  The real revelation would come later.
 
 The Nature of Order
 
@@ -185,8 +193,8 @@ Although Christopher Alexander knew that he had produced something valuable
 with his investigation and catalog of patterns, he was not completely
 satisfied.  Where had the patterns come from?  Could we make new
 patterns from scratch, or must be we content with what traditional
-architecture has produced so far?  Are patterns necessary at all?  How
-can we better define, and evaluate or measure, the quality without a name?
+architecture has managed to evolve so far?  Are patterns necessary at all?  How
+can we better define, and evaluate or measure, the Quality Without A Name?
 
 Alexander spent the next twenty years researching those questions.  By
 studying the actual *process* by which good built environments had
@@ -215,10 +223,10 @@ This was published in 2003-2004 in four volumes titled
 
 The fifteen properties
 
-The first book in "The Nature of Order" deals
-with fifteen properties that appear in all natural systems.  I will
-summarize them very briefly; see the references for pictures and more
-extensive explanations.
+The first book in "The Nature of Order" deals with fifteen properties
+that appear in all natural systems.  I will summarize them very
+briefly; see the references for pictures and more extensive
+explanations.
 
 	    <table frame="box" rules="all" cellpadding="10px">
 	      <tbody valign="top">
