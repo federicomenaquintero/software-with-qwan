@@ -474,7 +474,7 @@ example:
 1. Imagine that you write a PhoneCall class.  This is a latent center,
 not as strong as it could be.
 
-2. Gerard Meszaros, in "Pattern: Half Object + Protocol" (PLoP 1995)
+2. Gerard Meszaros, in "Pattern: Half Object + Protocol"
 suggested that you should split that into half calls tied by a
 protocol.
 
@@ -589,15 +589,22 @@ you, too!
 
 References
 
-A Pattern Language
+Christopher Alexander, "A Pattern Language".  Online version at http://vasarhelyi.eu/books/A_pattern_language_book/apl.htm
 
-The Nature of Order
+Christopher Alexander, "The Nature of Order".  Terrible web page at http://www.natureoforder.com/
 
 Photos and drawings of the fifteen properties of life - http://www.livingneighborhoods.org/ht-0/fifteen.htm
 
-Patterns of Software
+Richard Gabriel, "Patterns of Software".  A beautiful, wide-ranging
+book on software development, Christopher Alexander's ideas, and the
+search for good techniques for writing software.  Online version at
+http://dreamsongs.com/Files/PatternsOfSoftware.pdf
 
-AlexanderPresentation.pdf
-NatureOfOrder.pdf
+Richard Gabriel, "Christopher Alexander: the search for beauty".  A
+very good presentation of Christopher Alexander's ideas and an exposition
+of patterns in the software world.  http://dreamsongs.com/Files/AlexanderPresentation.pdf
 
-PLoP 1995 - Gerard Meszaros, "Pattern: Half Object + Protocol"
+Richard Gabriel, "The Nature of Order: the post-patterns world".
+Another very good presentation, subsequent to the previous one, that
+explains the Fifteen Properties of Life, the Fundamental Process, and
+how this relates to software.  http://dreamsongs.com/Files/NatureOfOrder.pdf
