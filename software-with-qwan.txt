@@ -332,205 +332,173 @@ explanations.
 	      </tbody>
 	    </table>
 
-	    <p>
-	      <strong>Structure-preserving transformations</strong>
-	    </p>
+Structure-preserving transformations
 
-	    <p>
-	      The second book in <em>The Nature of Order</em>
-	      describes how each of those properties also defines a
-	      transformation.  For example:
-	    </p>
+The second book in <em>The Nature of Order</em> describes how each of
+those properties also defines a transformation.  For example:
 
-	    <p> <strong>Thick boundaries.</strong> You can sometimes
-	      transform something beneficially by <em>adding</em> a
-	      boundary to it.  You plant a hedge around a garden,
-	      which then serves as beauty, as a wind-break so that
-	      strong winds don't damage the garden, and as a
-	      productive system on its own.  In a graphical user
-	      interface, scrollable boxes without a frame are hard to
-	      distinguish from the window's background (think of "all
-	      white" web pages with text entry boxes that don't have a
-	      frame).  You put a cornice at the top of a building, so
-	      that you don't get an abrupt transition between the building
-	      and the sky.  </p>
+* Thick boundaries. You can sometimes transform something beneficially
+by <em>adding</em> a boundary to it.  You plant a hedge around a
+garden, which then serves as beauty, as a wind-break so that strong
+winds don't damage the garden, and as a productive system on its own.
+In a graphical user interface, scrollable boxes without a frame are
+hard to distinguish from the window's background (think of "all white"
+web pages with text entry boxes that don't have a frame).  You put a
+cornice at the top of a building, so that you don't get an abrupt
+transition between the building and the sky.
 
-	    <p>
-	      <strong>Local symmetries.</strong>  Small parts of built
-	      things are easier to build symmetrically &mdash; because
-	      they are turned on a lathe, because they need access
-	      from both sides, because they fold like a book.  Making
-	      things asymmetrical "just to be interesting" takes extra
-	      work and it is harder to make them work well.
-	    </p>
+* <strong>Local symmetries.</strong> Small parts of built things are
+easier to build symmetrically &mdash; because they are turned on a
+lathe, because they need access from both sides, because they fold
+like a book.  Making things asymmetrical "just to be interesting"
+takes extra work and it is harder to make them work well.
 
-	    <p>
-	      <strong>Positive space.</strong> Feeling too exposed
-	      when in your desk?  Add a waist-high bookshelf beside
-	      you to delimit your space, but not to completely close
-	      you off.  Does your user interface feel like a lot of
-	      leftover space after you place the controls?  Make the
-	      controls surround the usable space instead.
-	    </p>
+* <strong>Positive space.</strong> Feeling too exposed when in your
+desk?  Add a waist-high bookshelf beside you to delimit your space,
+but not to completely close you off.  Does your user interface feel
+like a lot of leftover space after you place the controls?  Make the
+controls surround the usable space instead.
 
-	    <p>
-	      Each of these is a
-	      <em>structure-preserving&nbsp;transformation</em>.  You
-	      make a change in the existing structure not by tearing
-	      it down and remaking it, but by tweaking one thing at a
-	      time according to those properties and transformations.
-	    </p>
+Each of these is a <em>structure-preserving&nbsp;transformation</em>.
+You make a change in the existing structure not by tearing it down and
+remaking it, but by tweaking one thing at a time according to those
+properties as transformations.
 
-
-It turns out that this is what much of "Refactoring" is about, when you
-translate the concepts to code.  By extracting a chunk of code and
-putting it in a function with a name, you are essentially adding a
-thick boundary around that code, and creating a strong center.  By
-removing a global variable and adding class variables, you are
-allowing for roughness, as every instance can now have a different value in
-that variable, as needed.  By having a producer/consumer, or
-notifier/listener, you have a local symmetry, deep interlock and
-ambiguity, and good shape.
+It turns out that this is what much of "Refactoring" is about, when
+you translate the concepts to code.  Refactoring is just applying
+structure-preserving transformations.  You don't change what the
+program does; you just change how it is built internally, piece by
+piece.  By extracting a chunk of code and putting it in a function
+with a name, you are essentially adding a thick boundary around that
+code, and creating a strong center.  By removing a global variable and
+adding class variables, you are allowing for roughness, as every
+instance can now have a different value in that variable, as needed.
+By having a producer/consumer, or notifier/listener, you have local
+symmetries, deep interlock and ambiguity, and good shape.
 
 Richard Gabriel, one of the principal figures in Common Lisp, studied
 how to apply Alexander's theories to software (and also to poetry, and
-isn't code similar to poetry after all?).  
+isn't code similar to poetry after all?).  He gives the following
+example:
 
-	    <p>
-	      <strong>The fundamental process</strong>
-	    </p>
+1. Imagine that you write a PhoneCall class.  This is a latent center,
+not as strong as it could be.
 
-	    <p>
-	      Over a long argument, Alexander explains why following
-	      this process of applying structure-preserving
-	      transformations is the <em>only</em> way to achieve a
-	      good, functional design.  This is not just for
-	      buildings, but for everything we construct.  We mimic
-	      nature, but we do it faster.
-	    </p>
+2. Gerard Meszaros, in "Pattern: Half Object + Protocol" (PLoP 1995)
+suggested that you should split that into half calls tied by a
+protocol.
 
-	    <p>
-	      So, how do you do one step in your design/implementation
-	      process?
-	    </p>
+We attain a local symmetry, we make a strong center, and get levels of
+scale.
 
-	    <p>
-	      1. Start with what you have &mdash; an empty lot, or an
-	      already-built building, or a program that looks ugly and
-	      is hard to use.
-	    </p>
+3. Now make a diagram of that:
 
-	    <p>
-	      2. Identify the centers that exist in that space.  Find
-	      the weakest center or the least coherent.
-	    </p>
+You have local symmetry, levels of scale, boundaries, deep interlock
+and ambiguity - and this is where Meszaros left things.
 
-	    <p>
-	      3. See how to apply one or more of the fifteen
-	      structure-preserving transformations to strengthen that
-	      weak center.  Does it need to be delimited?  Does it
-	      need to be blended with its surroundings?  Does it need
-	      more detail?  Does it need to be de-cluttered?
-	    </p>
+4. Richard Gabriel then suggests strengthening the centers that exist
+by applying other structure-preserving transformations.  What about
+the latent center in the middle?
 
-	    <p>
-	      4. Find the new centers that are born when you apply the
-	      transformation to the old center.  Does the new
-	      combination make things stronger?  Prettier?  More functional?
-	    </p>
+You add an explicit boundary (Call) that ties the HalfCalls.  This
+improves the local symmetries, retains deep interlock and ambiguity,
+*and it is composable*.
 
-	    <p>
-	      5. Ensure that you did the simplest possible thing.
-	    </p>
+5. Yes, composable.
 
-	    <p>
-	      6. Go back to the beginning for the next step.
-	    </p>
+Multi-way calls, conference calls, happen all out of applying
+structure-preserving transformations.  Make your structure prettier,
+and the whole design becomes better and more functional.
 
-	    <p>
-	      A super-short summary could be, "find the bad parts;
-	      make them better in the simplest way possible; repeat
-	      until it is all good".
-	    </p>
+Probably every programmer keeps a mental picture of the program he is
+creating or modifying - the hard part of modifying code that you
+didn't write is *forming* that mental picture in the first place.
+When you work to make the code present a more beautiful picture, your
+code becomes better - and Alexander gives us a good way to do that.
 
-	    <p>
-	      <strong>What the hell does this have to do with software design?</strong>
-	    </p>
+The fundamental process
 
-	    <p>
-	      Let me give you some examples.
-	    </p>
+Over a long argument, Alexander explains why following this process of
+applying structure-preserving transformations is the <em>only</em> way
+to achieve a good, functional design.  This is not just for buildings,
+but for everything we construct.  It does not matter if you start with
+an existing program or building or city, or whether you are starting
+from scratch.  We mimic nature's own evolutions and regenerations, but
+we do it faster.
 
-	    <p>
-	      <a
-	      href="http://en.wikipedia.org/wiki/Code_refactoring">Refactoring</a>
-	      is just applying structure-preserving transformations.
-	      You don't change what the program does; you just change
-	      how it is built internally, piece by piece.
-	    </p>
+1. Start with what you have &mdash; an empty lot, or an
+already-built building, or a program that looks ugly and
+is hard to use.
 
-	    <p>
-	      <a
-	      href="http://www.joelonsoftware.com/articles/fog0000000069.html">You
-	      do not rewrite software</a>; you fix the software that
-	      exists.  Otherwise you lose all that knowledge, even if
-	      it looks ugly in its curent state.
-	    </p>
+2. Identify the centers that exist in that space.  Find
+the weakest center or the least coherent.
 
-	    <p>
-	      You don't design the whole user interface for a big
-	      program in a single step.  You go from big to small or
-	      small to big (<strong>levels of scale</strong>); you
-	      test each part individually until it is good
-	      (<strong>strong centers</strong>); you make sure the
-	      parts are not too disconnected from each other
-	      (<strong>non-separateness</strong>).  You move a few
-	      widgets where they are easier to reach, or where they
-	      are closer to the data to which they refer.  You remove
-	      some frames and separators to reduce clutter.
-	    </p>
+3. See how to apply one or more of the fifteen structure-preserving
+transformations to strengthen that weak center.  Does it need to be
+delimited?  Does it need to be blended with its surroundings?  Does it
+need more detail?  Does it need to be de-cluttered?
 
-	    <p>
-	      <strong>Free software and cities</strong>
-	    </p>
+4. Find the new centers that are born when you apply the
+transformation to the old center.  Does the new combination make
+things stronger?  Prettier?  More functional?
 
-	    <p>
-	      We software developers are building cities.  I include
-	      code hackers, designers, translators, documenters,
-	      etc. in the term "developers" &mdash; building cities of
-	      software programs interconnected with each other through
-	      IPC.  Each program is a building, large or small, simple
-	      or complex, each with a different purpose and layout.
-	    </p>
+5. Ensure that you did the simplest possible thing.
 
-	    <p>
-	      Designing a whole system (kernel, libraries, tools,
-	      shell, programs) would be like trying to design a whole city.
-	      <strong><a
-	      href="http://emergenturbanism.com/2009/03/23/the-journey-to-emergence/">A
-	      good city cannot be designed</a></strong>; it has to emerge from
-	      the interactions between its inhabitants, over many
-	      years.  Good cities are emergent, not designed.
-	      Ecosystems emerge from the interactions of living and
-	      non-living beings; they are not designed and they always
-	      evolve.
-	    </p>
+6. Go back to the beginning for the next step.
 
-	    <p>
-	      Remember that no one can work on <em>all</em> of free
-	      software.  You cannot design a whole system by yourself, and you
-	      cannot make everyone agree on everything for a perfectly
-	      consistent design.  But if you follow the
-	      structure-preserving transformations and the fundamental
-	      process, you can build your part of a big system and it
-	      will automatically be harmonious with everything else
-	      &mdash; and you will have fixed the bad parts first,
-	      making the overall <em>goodness</em> much better.
-	    </p>
+Alexander is not keen on destroying things just to rebuild them.  You
+shouldn't demolish part of a town to rebuild it; you should improve it
+gradually.  In software, it is well-known that you shouldn't rewrite
+things just because you don't understand them anymore.  Tearing things
+down makes you lose all the knowledge you had embodied in the thing
+you are destroying, even if it looks ugly in its current state.
 
-	    <p>
-	      So, go forth and design and build and iterate.
-	    </p>
+Similarly, Alexander is against making detailed, up-front designs.  He
+gives a good argument of why pre-made designs can't work well in the
+end:  because you cannot predict absolutely everything that will come
+up during construction or implementation; because you *will* miss
+details of the environment into which your creation will live; because
+Nature itself isn't pre-ordained, and rather it grows organically and
+mercilessly evolves things until they manage to survive by themselves.
+
+In this fashion, you don't design the whole user interface for a big
+program in a single step.  You go from big to small or small to big
+(<strong>levels of scale</strong>); you test each part individually
+until it is good (<strong>strong centers</strong>); you make sure the
+parts are not too disconnected from each other
+(<strong>non-separateness</strong>).  You move a few widgets where
+they are easier to reach, or where they are closer to the data to
+which they refer.  You remove some frames and separators to reduce
+clutter.  Above all, you continually evaluate what you created against
+real users and real use cases, so that you empirically test things
+against reality, not against castles in the sky.
+
+Free software and cities
+
+We software developers are building cities.  I include code hackers,
+visual designers, translators, documenters, etc. in the term "developers"
+&mdash; building cities of software programs interconnected with each
+other through IPC.  Each program is a building, large or small, simple
+or complex, each with a different purpose and layout.
+
+Designing a whole system (kernel, libraries, tools, shell, programs)
+would be like trying to design a whole city.  <strong><a
+href="http://emergenturbanism.com/2009/03/23/the-journey-to-emergence/">A
+good city cannot be designed</a></strong>; it has to emerge from the
+interactions between its inhabitants, over many years.  Good cities
+are emergent, not designed.  Ecosystems emerge from the interactions
+of living and non-living beings; they are not designed and they always
+evolve.
+
+Remember that no one can work on <em>all</em> of free software.  You
+cannot design a whole system by yourself, and you cannot make everyone
+agree on everything for a perfectly consistent design.  But if you
+follow the structure-preserving transformations and the fundamental
+process, you can build your part of a big system and it will
+automatically be harmonious with what surrounds it &mdash; and you will
+have fixed the bad parts first, making the overall <em>goodness</em>
+much better.
+
 
 
 Alexander's work
@@ -791,3 +759,5 @@ Patterns of Software
 
 AlexanderPresentation.pdf
 NatureOfOrder.pdf
+
+PLoP 1995 - Gerard Meszaros, "Pattern: Half Object + Protocol"
