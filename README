@@ -1,0 +1,26 @@
+Software that has the Quality Without a Name
+============================================
+
+This is an essay that appeared originally in the book, "Open Advice",
+edited by Lydia Pintscher [1].  Later, I gave a presentation about
+this during the 2011 Desktop Summit in Berlin [2].
+
+This essay is about my journey through the theories of Christopher
+Alexander, a mathematician and architect who (re)discovered how to
+make buildings that are comfortable, functional, and psychologically
+nourishing.  Alexander's work was then used as a basis for the
+well-known "Refactoring" and "Design Patterns" books, which are
+familiar to many programmers.
+
+My intention is to turn this essay into a more substantial work, with
+specific examples about software that exhibits the qualities that
+Alexander talks about.
+
+Feel free to mail me:  Federico Mena Quintero <federico@gnome.org>
+
+
+[1] Open Advice book with the original essay:
+http://open-advice.org/
+
+[2] Presentation on Software that has the Quality Without a Name:
+http://people.gnome.org/~federico/docs/2011-Desktop-Summit/qwan/html/index.html
