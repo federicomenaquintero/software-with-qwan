@@ -1,0 +1,1044 @@
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
+                  "http://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd" [
+]>
+
+<article id="index">
+  <articleinfo>
+    <title>Software that has the Quality Without A Name</title>
+    <date>May 2011</date>
+    <author>
+      <firstname>Federico</firstname>
+      <surname>Mena-Quintero</surname>
+      <affiliation>
+	<address><email>federico@gnome.org</email></address>
+      </affiliation>
+    </author>
+
+    <copyright>
+      <year>2011</year>
+      <holder>Federico Mena-Quintero</holder>
+    </copyright>
+
+    <revhistory>
+      <revision>
+	<revnumber>1.0</revnumber>
+	<date>May 2011</date>
+	<revdescription>
+	  <para>
+	    Published in the <citetitle>Open Advice</citetitle> book, edited by
+	    <author>
+	      <firstname>Lydia</firstname>
+	      <surname>Pintscher</surname>
+	    </author>, under a Creative Commos BY-SA license.
+	  </para>
+	</revdescription>
+      </revision>
+    </revhistory>
+
+    <legalnotice>
+      <formalpara>
+	<title>License</title>
+
+	<para>
+	  This work is licensed under the Creative Commons
+	  Attribution-Share Alike 3.0 Unported License. To view a copy
+	  of this license, visit <ulink
+	  url="http://creativecommons.org/licenses/by-sa/3.0/">http://creativecommons.org/licenses/by-sa/3.0/</ulink>
+	  or send a letter to Creative Commons, 171 Second Street,
+	  Suite 300, San Francisco, California, 94105, USA.
+	</para>
+      </formalpara>
+
+      <formalpara>
+	<title>Availability</title>
+
+	<para>
+	  The latest version of this document is always available at <ulink url="FIXME">FIXME</ulink>
+	</para>
+      </formalpara>
+    </legalnotice>
+  </articleinfo>
+
+  <para>
+    When I was learning how to program, I noticed that I frequently hit
+    the same problem over and over again:  I would often write a program
+    that worked reasonably well, and even had a good structure, but after
+    some time of modifying it and enhancing it, I could no longer tweak it
+    any further.  Either its complexity would overwhelm me, or it would be
+    so tightly written that it allowed no room for expansion, like a house
+    where you cannot build up because it has a sloping roof, and you
+    cannot build to the sides because it has a wall all around it.
+  </para>
+
+  <para>
+    As I got better, I learned to deal with complexity.  We all learn how
+    to do that with various tools and techniques:  abstraction,
+    encapsulation, object-orientation, functional techniques, etc.  We
+    learn how various techniques let us write broader programs.
+  </para>
+
+  <para>
+    However, the problem of having a program that was too tight or too
+    intertwined to modify still persisted.  Sometimes I had what I thought
+    was a beautiful design, but modifying it in any way would &ldquo;make it
+    uglier&rdquo; and I did not want that.  Other times I had something with so
+    many interconnected parts, that I just could not plug anything else
+    into it or the whole thing would fall down under its own weight.
+  </para>
+
+  <para>
+    Some years ago the <citetitle>Refactoring</citetitle> book by <author>
+      <firstname>Martin</firstname>
+      <surname>Fowler</surname>
+    </author> came out and a craze started, but I did not pay much attention to it.  I said, sure,
+    it is a way to clean up your code, but so what?  I already know how to
+    take a chunk of code and turn it into a function; I already know how
+    to take similar chunks of code and turn them into derived classes.  I
+    already know how to write mostly-clean code.  What's the big deal?
+  </para>
+
+  <para>
+    I dismissed <citetitle>Refactoring</citetitle> as something suited to less-experienced
+    programmers; as some nice recipes for cleaning up your code, but
+    nothing that you could not discover yourself.
+  </para>
+
+  <para>
+    The same thing happened to me with <citetitle>Design Patterns</citetitle> by Gamma et al.  I
+    thought they were just giving pompous names like <firstterm>Singleton</firstterm> and
+    <firstterm>Strategy</firstterm> to the everyday kinds of structures one would naturally put
+    in a program.
+  </para>
+
+  <para>
+    Maybe my ego as a programmer was too inflated to consider those works
+    seriously.  But then, something happened.
+  </para>
+
+  <section>
+    <title>Christopher Alexander's work</title>
+
+    <para>
+      Some years ago, my wife and I bought a small, one-storey house and we
+      wanted to expand it.  We were thinking of having a child, so we needed
+      more space.  I needed a real home-office, not just a leftover alcove
+      where my desk and bookcases barely fit.  As avid cooks, we both needed
+      a kitchen that was larger and more comfortable the one the house
+      had. My wife needed a Room Of Her Own.
+    </para>
+
+    <para>
+      We did not want to pay for an expensive architect, and neither of us
+      knew anything about construction.  How would we design our house?
+    </para>
+
+    <para>
+      At times, while browsing the web, I'll sometimes remember that I have
+      seen the name of a certain author before, or the title of a book, or
+      something like that.  I may have not really paid attention to it in
+      the past, but somehow, the more times I see the same thing mentioned,
+      the more likely it is that I will get interested enough in it to
+      actually see what it is about.  &ldquo;Oh, several people have already
+      mentioned this name or this book; maybe I should check it out.&rdquo;
+    </para>
+
+    <para>
+      That is just what happened with the name of Christopher Alexander.  I
+      had read that he was a peculiar architect (of real-world buildings,
+      not software), somehow connected to the software world through
+      object-oriented techniques.  As I started reading about his work, I
+      became tremendously interested in it.
+    </para>
+
+    <para>
+      In the 1970s, Christopher Alexander was a mathematician/architect
+      teaching at the University of California, Berkeley.  He and a group of
+      like-minded architects went to various places around the world, trying
+      to see if there were reasons for why there are human-built places in
+      the world (cities, towns, parks, buildings, houses) where it is very
+      pleasant to be, those that are comfortable, livable, and nice, and
+      some places where this is not the case.  The pleasant places were
+      present in all of the traditional architectures of the world –
+      European, African, Asian, American – which pointed to the idea of
+      being able to extract common factors from all of them.
+    </para>
+
+    <para>
+      Alexander and his team distilled their findings into a list of good
+      architectural patterns, and published three books:  <citetitle>The Timeless Way
+      of Building</citetitle>, where they describe the philosophy and method of good
+      architecture; <citetitle>A Pattern Language</citetitle>, which I will describe next; and <citetitle>The
+      Oregon Experiment</citetitle>, where they detail the design and construction of a
+      university campus with their method.
+    </para>
+  </section>
+
+  <section>
+    <title>A Pattern Language</title>
+
+    <para>
+      A <firstterm>pattern</firstterm> is a recurring problem when designing and building things,
+      with a discussion of the forces that shape the problem, and with a
+      solution that is in turn connected, almost recursively, to other
+      super- or sub-patterns.  For example, let's consider INTIMACY
+      GRADIENT, an important pattern in the book (patterns are spelled in
+      capital letters throughout the book for easy identification, so I will
+      do the same):
+    </para>
+
+    <example>
+      <title>INTIMACY GRADIENT</title>
+
+      <formalpara>
+	<title>Super-patterns and preamble:</title>
+
+	<para>
+	  ... if you know roughly where you intend
+	  to place the building wings &mdash; WINGS OF LIGHT, and how many stories
+	  they will have &mdash; NUMBER OF STORIES, and where the MAIN ENTRANCE is, it
+	  is time to work out the rough disposition of the major areas on every
+	  floor.  In every building the relationship between the public areas
+	  and private areas is most important.
+	</para>
+      </formalpara>
+
+      <formalpara>
+	<title>Statement of problem:</title>
+
+	<para>
+	  <quote>Unless the spaces in a building are arranged in
+	    a sequence which corresponds to their degrees of privateness, the
+	    visits made by strangers, friends, guests, clients, family, will
+	    always be a little awkward.</quote> <!-- FIXME: citation -->
+	</para>
+      </formalpara>
+
+      <formalpara>
+	<title>Discussion:</title>
+
+	<para>
+	  I will not quote all of it.  But for example, consider an
+	  apartment where you can only reach the bathroom by first crossing the
+	  bedroom.  Visits are always awkward because you feel like you need to
+	  tidy up your room first, if you intend your visitors to be able to use
+	  the WC!  Or consider an office, where you don't want a &ldquo;quiet work
+	  space&rdquo; to be right next to the reception, because then it will not be
+	  quiet at all &mdash; you want it to be more private, towards the back.
+	</para>
+      </formalpara>
+
+      <formalpara>
+	<title>Summary of the solution:</title>
+
+	<para>
+	  <quote>Lay out the spaces of a bulding so that they
+	  create a sequence which begins with the entrance and the most public
+	  parts of the building, then leads into the slightly more private
+	  areas, and finally to the most private domains.</quote> <!-- FIXME: citation -->
+	</para>
+      </formalpara>
+
+      <formalpara>
+	<title>Sub-patterns to consult:</title>
+
+	<para>
+	  COMMON AREAS AT THE HEART.  ENTRANCE ROOM for
+	  houses; A ROOM OF ONE'S OWN for individuals.  RECEPTION WELCOMES YOU
+	  for offices, HALF-PRIVATE OFFICE at the back.
+	</para>
+      </formalpara>
+    </example>
+
+    <para>
+      The patterns get quite specific, but they never impose a style or an
+      actual shape for the result.  For example, there is a pattern called
+      OPEN SHELVES.  Deep cupboards make you put things behind other things,
+      so you can't see them nor reach them.  They also have a big
+      footprint. Cupboards that are one-item-deep automatically stay tidy,
+      and you always know at a glance where everything is.  Things that you
+      use frequently should not be behind doors.
+    </para>
+
+    <para>
+      So you can see the essence of design patterns:  good, tested recipes
+      that don't constrain your implementation in unnecessary ways.  The
+      patterns do not mandate a particular style, nor include superfluous
+      decorations:  the book doesn't tell you, &ldquo;make this shape of
+      flourishes in the handrails&rdquo;; instead it tells you, &ldquo;a house should
+      have its rooms placed such that sunlight enters them according to the
+      time of the day in which they are most used &mdash; East for the bedrooms in
+      the morning, West for the living room in the afternoon&rdquo;.
+    </para>
+
+    <para>
+      I had gotten a copy of <citetitle>A Pattern Language</citetitle> shortly before starting the
+      expansion of our house.  The book was a revelation:  <emphasis>this</emphasis> was the way
+      to approach the design of our house, and now we could do it ourselves
+      instead of paying a lot of money for an inadequate solution.  We were
+      able to make up a rough plan for our house, and then figure out
+      smaller details as the construction went on.  This is the kind of book
+      that, as you read it, manages to confirm intuitive ideas that you
+      half-knew you had &mdash; the kind of book where you find yourself saying,
+      &ldquo;of course, this is completely how I thought it should be&rdquo; all the
+      time.
+    </para>
+
+    <para>
+      <citetitle>Design Patterns</citetitle>, the well-known book by Gamma et al, took direct
+      inspiration from Alexander's architectural patterns.  They wanted to
+      do the same thing:  to make a list of problems that appear frequently
+      when programming, and to present good solutions for them, that
+      wouldn't constrain your implementation unnecessarily.
+    </para>
+
+    <para>
+      One thing that I realized while reading A Pattern Language &mdash; a
+      valuable thing from both lists of patterns, the architectural and the
+      software one, is that they give us a vocabulary to talk about how
+      things are constructed.  It is much more convenient to say, &ldquo;this
+      object has listeners for its properties&rdquo;, than &ldquo;this object lets you
+      hook callback functions that are called when its properties
+      change&rdquo;. What I thought were only pompous names, are in fact ways to
+      express knowledge in a compact form.
+    </para>
+  </section>
+
+  <section>
+    <title>The Quality Without A Name</title>
+
+    <para>
+      Much of Alexander's discussion of patterns and their philosophy refers
+      something which he calls the <firstterm>Quality Without A Name</firstterm>.  You know
+      places with the Quality Without A Name.  It is present in the coffee
+      shop where you like to go to read, because the afternoon light hits it
+      at just the right intensity, and there are comfortable seats and
+      tables, and somehow it always is packed with people and yet you don't
+      feel overcrowded.  It is present in the corner in a park where a tree
+      shades a bench, maybe there is some water running, and no matter if it
+      rains or if it is sunny, it always seems to be a pleasure to be
+      there. Think of a Hobbit House, where everything is at hand,
+      everything is comfortable, and everything is lovingly made.
+    </para>
+
+    <para>
+      A thing or place has the quality without a name if it is comfortable,
+      has evolved over time in its own terms, is free of inner
+      contradictions, doesn't try to draw attention to itself, and seems to
+      have archetypal qualities &mdash; like if it were <emphasis>the</emphasis> way that thing was
+      supposed to be built.  Most importantly, Alexander asserted that this
+      is an <emphasis>objective</emphasis> quality, not a subjective one, and that it can be
+      measured and compared.  Although this seems like a very vague
+      definition, that is as far as Alexander was able to take it during
+      this first phase of his work.  The real revelation would come later.
+    </para> <!-- FIXME: for v2, s/revelation/breakthrough -->
+
+    <para>
+      As programmers, we have all seen beautiful programs at some
+      point. Maybe they are the examples in <citetitle>Programming Pearls</citetitle>, a beautiful
+      book which every hacker should read.  Maybe you have seen a
+	beautifully implemented algorithm that exudes <emphasis>rightness</emphasis>.  Maybe you
+      remember a very compact, very legible, very functional, very correct
+      piece of code.  That software has the Quality Without A Name.
+    </para>
+
+    <para>
+      It became clear to me that I had to learn to write software that
+      attained the Quality Without A Name, and Alexander's frame of mind was
+      the right starting point for this.
+    </para>
+  </section>
+
+  <section>
+    <title>The ticket booth</title>
+
+    <para>
+      Alexander's PhD dissertation, which was the basis for his book <citetitle>Notes
+      on the Synthesis of Form</citetitle> from 1964, tried to mathematize design by
+      defining it as a progression from a series of requirements to a final
+      result, through an analysis of the forces that shaped the design.
+    </para> <!-- FIXME: citation for Notes on the Synthesis of Form -->
+
+    <para>
+      Let me quote Richard Gabriel, of whom I will talk more later, when he
+      describes the time when Alexander was trying to design a ticket booth
+      based on his mathematical ideas.
+    </para>
+
+    <!-- FIXME: how to make a quote out of the paragraphs below? -->
+
+    <para>
+      Alexander says [about the Quality Without A Name]:
+    </para>
+
+    <para>
+      <quote>It is a subtle kind of freedom from inner contradictions.</quote> (Alexander 1979)
+    </para>
+
+    <para>
+      This statement reflects the origins of his inquiry into the
+      quality. It started in 1964 when he was doing a study for the [San
+      Francisco] Bay Area Rapid Transit (BART) system based on the work
+      reported in Notes on the Synthesis of Form (Alexander 1964), which in
+      turn was based on his Ph.D. dissertation. One of the key ideas in this
+      book was that in a good design there must be an underlying
+      correspondence between the structure of the problem and the structure
+      of the solution &mdash; good design proceeds by writing down the
+      requirements, analyzing their interactions on the basis of potential
+      misfits, producing a hierarchical decomposition of the parts, and
+      piecing together a structure whose
+      <quote>structural hierarchy is the exact counterpart of the functional
+	hierarchy established during the analysis of the program.</quote> (Alexander 1964)
+    </para>
+
+    <para>
+      Alexander was studying the system of forces surrounding a ticket
+      booth, and he and his group had written down 390 requirements for what
+      ought to be happening near it. Some of them pertained to such things
+      as being there to get tickets, being able to get change, being able to
+      move past people waiting in line to get tickets, and not having to
+      wait too long for tickets. What he noticed, though, was that certain
+      parts of the system were not subject to these requirements and that
+      the system itself could become bogged down because these other forces
+      &mdash; forces not subject to control by requirements &mdash; acted to come to
+      their own balance within the system. For example, if one person
+      stopped and another also stopped to talk with the first, congestion
+      could build up that would defeat the mechanisms designed to keep
+      traffic flow smooth. Of course there was a requirement that there not
+      be congestion, but there was nothing the designers could do to prevent
+      this by means of a designed mechanism.
+    </para>
+
+    <!-- FIXME: End quotation -->
+
+    <para>
+      As a programmer, does this sound familiar?  You can make a beautiful,
+      thorough design, that crumbles down when you actually build it because
+      <emphasis>things emerge</emphasis> that you did not anticipate.  This is not a failure of
+      your design, but of something else!  Richard Gabriel goes on:
+    </para>
+
+    <!-- FIXME: begin quotation -->
+
+    <para>
+      Alexander said this:
+    </para>
+
+    <para>
+      <quote>
+	So it became clear that the free functioning of the system did not
+	purely depend on meeting a set of requirements. It had to do, rather,
+	with the system coming to terms with itself and being in balance with
+	the forces that were generated internal to the system, not in
+	accordance with some arbitrary set of requirements we stated. I was
+	very puzzled by this because the general prevailing idea at the time
+	[in 1964] was that essentially everything was based on goals. My whole
+	analysis of requirements was certainly quite congruent with the
+	operations research point of view that goals had to be stated and so
+	on.  What bothered me was that the correct analysis of the ticket
+	booth could not be based purely on one’s goals, that there were
+	realities emerging from the center of the system itself and that
+	whether you succeeded or not had to do with whether you created a
+	configuration that was stable with respect to these realities.
+      </quote>
+    </para>
+
+    <!-- FIXME: end quotation -->
+
+    <para>
+      And that is the core of the problem:  how do you create a
+      configuration that is stable with the realities that emerge from
+      itself as you build it?
+    </para>
+  </section>
+
+  <section>
+    <title>The Nature of Order</title>
+
+    <para>
+      Although Christopher Alexander knew that he had produced something
+      valuable with his investigation and catalog of patterns, he was not
+      completely satisfied.  Where had the patterns come from?  Could we
+      make new patterns from scratch, or must be we content with what
+      traditional architecture has managed to evolve so far?  Are patterns
+      necessary at all?  How can we better define, and evaluate or measure,
+      the Quality Without A Name?
+    </para>
+
+    <para>
+      Alexander spent the next twenty years researching those questions.  By
+      studying the actual <emphasis>process</emphasis> by which good built environments had been
+      created, he discovered that processes of a certain kind are essential
+      to creating good towns, or buildings, or any man-made thing in fact.
+      He arrived at the following conclusions:
+    </para>
+
+    <itemizedlist>
+      <listitem>
+	<para>
+	  Nature creates things that all have about 15 properties in common (I
+	  will show you later).  This happens solely through natural processes &mdash;
+	  standard physics and chemistry &mdash; although it is not quite clear why
+	  very different processes produce similar results.
+	</para>
+      </listitem>
+
+      <listitem>
+	<para>
+	  Traditional architectures, or towns which just evolved over time, also
+	  have those properties.  You can derive all the patterns in <citetitle>A Pattern
+	  Language</citetitle> by following a certain process based on those properties.
+	</para>
+      </listitem>
+
+      <listitem>
+	<para>
+	  Each property can also describe a <firstterm>transformation</firstterm> to the existing
+	  space.
+	</para>
+      </listitem>
+
+      <listitem>
+	<para>
+	  The only way to achieve good design is by using those transformations,
+	  one at a time.
+	</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>
+      This was published in 2003-2004 in four volumes titled <citetitle>The Nature of
+      Order.</citetitle> <!-- FIXME: citation for TNoO -->
+    </para>
+  </section>
+
+  <section>
+    <title>The fifteen properties</title>
+
+    <para>
+      The first book in <citetitle>The Nature of Order</citetitle>,
+      <citetitle>The Phenomenon of Life</citetitle>, deals with fifteen properties
+      that appear in all natural systems.  I will summarize them very
+      briefly; see the references for pictures and more extensive
+      explanations.
+    </para>
+
+    <variablelist>
+      <varlistentry>
+	<term>Levels of scale.</term>
+	<listitem>
+	  <para>
+	    Levels of scale.  There is a balanced range of sizes.  You don't have
+	    abrupt changes in the sizes of adjacent things.  Elements have fractal
+	    scale.
+	  </para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>Strong centers.</term>
+	<listitem>
+	  <para>
+	    You can clearly identify parts of the space or structure.
+	  </para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>Thick boundaries.</term>
+	<listitem>
+	  <para>
+	    Lines delimit things.  In living systems, edges are
+	    the most productive environments (e.g. all the critters that live at
+	    the edge of the water).
+	  </para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>Alternating repetition.</term>
+	<listitem>
+	  <para>
+	     High/low, thick/thin, shape A and shape B. Things oscillate and alternate to create a good balance.
+	  </para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>Positive space.</term>
+	<listitem>
+	  <para>
+	    Space is beautifully shaped, convex, enclosed.  It is
+	    not leftover space.  Think of how a Voronoi diagram has cells that
+	    grow outward from a bunch of points, or how a piece of corn has
+	    kernels that grow from tiny points until they touch the adjacent
+	    kernels.
+	  </para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>Good shape.</term>
+	<listitem>
+	  <para>
+	    The sails of a ship, the shell of a snail, the beak of a
+	    bird.  They attain the optimal shape for their purpose, which is
+	    beautiful.
+	  </para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>Local symmetries.</term>
+	<listitem>
+	  <para>
+	    The world is not symmetrical at large.  But small
+	    things tend to be symmetrical, because it is easier that way. Your
+	    house is not symmetrical, but each window is.
+	  </para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>Deep interlock and ambiguity.</term>
+	<listitem>
+	  <para>
+	    The crooked streets of old towns.  Axons
+	    in neurons.  It is hard to separate figure and ground, or foreground
+	    and background.  Two strong centers are made stronger if a third
+	    center is placed between them, so that it belongs to both.
+	  </para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>Contrast.</term>
+	<listitem>
+	  <para>
+	    You can distinguish where one thing ends and the next one
+	    begins, because they don't fade into each other.
+	  </para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>Gradients.</term>
+	<listitem>
+	  <para>
+	    Things fade into each other where they need to.
+	    Concentrations in solutions, snow or earth banks, the wires that
+	    support a bridge.  The way bandwidth decreases as you move away from
+	    the backbone.
+	  </para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>Roughness.</term>
+	<listitem>
+	  <para>
+	    The world is not frictionless and smooth.  Irregularities
+	    are good because they let each piece adapt perfectly to its
+	    surroundings, rather than being an exact copy that may not fit as
+	    well.
+	  </para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>Echoes.</term>
+	<listitem>
+	  <para>
+	    Things repeat and echo each other.  Things are unique in their
+	    exact shape, but the general shapes repeat over and over.
+	  </para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>The void.</term>
+	<listitem>
+	  <para>
+	    Sometimes you get a big blank area for quietness of form.
+	    A lake, a courtyard, a picture window.
+	  </para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>Simplicity and inner calm.</term>
+	<listitem>
+	  <para>
+	    Things are as simple as possible, but no simpler.
+	  </para>
+	</listitem>
+      </varlistentry>
+
+      <varlistentry>
+	<term>Non-separateness.</term>
+	<listitem>
+	  <para>
+	    Everything depends on everything else.  You can't
+	    separate a fish from the pond and the aquatic plants.  You can't
+	    separate a column from the base of the building.
+	  </para>
+	</listitem>
+      </varlistentry>
+    </variablelist>
+  </section>
+
+  <section>
+    <title>Structure-preserving transformations</title>
+
+    <para>
+      The second book in <citetitle>The Nature of Order</citetitle>,
+      <citetitle>The Process of Creating Life</citetitle>, describes how each of those
+      properties also defines a transformation.  For example:
+    </para>
+
+    <formalpara>
+      <title>Thick boundaries</title>
+
+      <para>
+	You can sometimes transform something beneficially
+	by <emphasis>adding</emphasis> a boundary to it.  You plant a hedge around a garden, which
+	then serves as beauty, as a wind-break so that strong winds don't
+	damage the garden, and as a productive system on its own. In a
+	graphical user interface, scrollable boxes without a frame are hard to
+	distinguish from the window's background (think of "all white" web
+	pages with text entry boxes that don't have a frame).  You put a
+	cornice at the top of a building, so that you don't get an abrupt
+	transition between the building and the sky.
+      </para>
+    </formalpara>
+
+    <formalpara>
+      <title>Local symmetries</title>
+
+      <para>
+	Small parts of built things are easier to build
+	symmetrically &mdash; because they are turned on a lathe, because they need
+	access from both sides, because they fold like a book.  Making things
+	asymmetrical &ldquo;just to be interesting&rdquo; takes extra work and it is
+	harder to make them work well.
+      </para>
+    </formalpara>
+      
+    <formalpara>
+      <title>Positive space.</title>
+
+      <para>
+	Feeling too exposed when in your desk?  Add a
+	waist-high bookshelf beside you to delimit your space, but not to
+	completely close you off.  Does your user interface feel like a lot of
+	leftover space after you place the controls?  Make the controls
+	surround the usable space instead.
+      </para>
+    </formalpara>
+
+    <para>
+      Each of these is a <firstterm>structure-preserving transformation</firstterm>. You make a
+      change in the existing structure not by tearing it down and remaking
+      it, but by tweaking one thing at a time according to those properties
+      as transformations.
+    </para>
+
+    <para>
+      In software terms, it turns out that this is what much of <citetitle>Refactoring</citetitle>
+      is about, when you translate the concepts to code.  Refactoring is just
+      applying structure-preserving transformations, or as Martin Fowler
+      would put it, behavior-preserving transformations.  You don't change
+      what the program does; you just change how it is built internally,
+      piece by piece.
+    </para>
+
+    <para>
+      By extracting a chunk of code and putting it in a function with a
+      name, you are essentially adding a thick boundary around that code,
+      and creating a strong center.  By removing a global variable and
+      adding class variables, you are allowing for roughness, as every
+      instance can now have a different value in that variable, as
+      needed. By having a producer/consumer, or notifier/listener, you have
+      local symmetries, deep interlock and ambiguity, and good shape.
+    </para>
+
+    <para>
+      Richard Gabriel, one of the principal figures in Common Lisp, studied
+      how to apply Alexander's theories to software (and also to poetry, and
+      isn't code similar to poetry after all?).  He gives the following
+      example:
+    </para>
+
+    <!-- FIXME: pictures in the following -->
+
+    <orderedlist>
+      <listitem>
+	<para>
+	  Imagine that you write a <classname>PhoneCall</classname> class.  This is a latent center,
+	  not as strong as it could be.
+	</para>
+      </listitem>
+
+      <listitem>
+	<para>
+	  Gerard Meszaros, in <citetitle>Pattern: Half Object + Protocol</citetitle> suggested
+	  that you should split that into half calls tied by a protocol.
+	</para>	<!-- FIXME: citation for PHO+P -->
+
+	<para>
+	  We attain a local symmetry, we make a strong center, and get levels of
+	  scale.
+	</para>
+      </listitem>
+
+      <listitem>
+	<para>
+	  Now make a diagram of that:
+	</para>
+
+	<para>
+	  You have local symmetry, levels of scale, boundaries, deep interlock
+	  and ambiguity &mdash; and this is where Meszaros left things.
+	</para>
+      </listitem>
+
+      <listitem>
+	<para>
+	  Richard Gabriel then suggests strengthening the centers that exist
+	  by applying other structure-preserving transformations.  What about
+	  the latent center in the middle?
+	</para>
+
+	<para>
+	  You add an explicit boundary (<classname>Call</classname>) that ties the <classname>HalfCalls</classname>.  This
+	  improves the local symmetries, retains deep interlock and ambiguity,
+	  <emphasis>and it is composable</emphasis>.
+	</para>
+      </listitem>
+
+      <listitem>
+	<para>
+	  Yes, composable.
+	</para>
+
+	<para>
+	  Multi-way calls, conference calls, happen all out of applying
+	  structure-preserving transformations.
+	</para>
+      </listitem>
+    </orderedlist>
+
+    <para>
+      Probably every programmer keeps a mental picture of the program he is
+      creating or modifying &mdash; the hard part of modifying code that you
+      didn't write is forming that mental picture in the first place. When
+      you work to make the code present a more beautiful picture, your code
+      becomes better &mdash; and Alexander gives us a good way to do that.
+    </para>
+  </section>
+
+  <section>
+    <title>The fundamental process</title>
+
+    <para>
+      Over a long argument, Alexander explains why following this process of
+      applying structure-preserving transformations is the <emphasis>only</emphasis> way to
+      achieve a good, functional design.  This is not just for buildings,
+      but for everything we construct.  It does not matter if you start with
+      an existing program or building or city, or whether you are starting
+      from scratch.  We mimic nature's own evolutions and regenerative
+      processes, but we do it faster.
+    </para>
+
+    <orderedlist>
+      <listitem>
+	<para>
+	  Start with what you have &mdash; an empty lot, or an already-built
+	  building, or a program that looks ugly and is hard to use.
+	</para>
+      </listitem>
+
+      <listitem>
+	<para>
+	  Identify the centers that exist in that space.  Find the weakest
+	  center or the least coherent.
+	</para>
+      </listitem>
+
+      <listitem>
+	<para>
+	  See how to apply one or more of the fifteen structure-preserving
+	  transformations to strengthen that weak center.  Does it need to be
+	  delimited?  Does it need to be blended with its surroundings?  Does it
+	  need more detail?  Does it need to be de-cluttered?
+	</para>
+      </listitem>
+
+      <listitem>
+	<para>
+	  Find the new centers that are born when you apply the
+	  transformation to the old center.  Does the new combination make
+	  things stronger?  Prettier?  More functional?
+	</para>
+      </listitem>
+
+      <listitem>
+	<para>
+	  Ensure that you did the simplest possible thing.
+	</para>
+      </listitem>
+
+      <listitem>
+	<para>
+	  Go back to the beginning for the next step.
+	</para>
+      </listitem>
+    </orderedlist>
+
+    <para>
+      A super-simple summary would be:  find the bad parts, make them better
+      in the simplest way possible, test the results, iterate.
+    </para>
+
+    <para>
+      Alexander is not keen on destroying things just to rebuild them in a
+      different way.  You shouldn't demolish part of a town to rebuild it;
+      you should improve it gradually.  In software, it is well-known that
+      you shouldn't rewrite things just because you don't understand them
+      anymore.  Tearing things down makes you lose all the knowledge you had
+      embodied in the thing you are destroying, even if it looks ugly in its
+      current state.
+    </para>
+
+    <para>
+      Similarly, Alexander is against making detailed, up-front designs.  He
+      gives a good argument of why pre-made designs can't work well in the
+      end:  because you cannot predict absolutely everything that will come
+      up during construction or implementation; because you will miss
+      details of the environment into which your creation will live; because
+      Nature itself isn't pre-ordained, and rather it grows organically and
+      mercilessly evolves things until they manage to survive by themselves.
+    </para>
+
+    <para>
+      In this fashion, you don't design the whole user interface, or the
+      whole structure, for a big program in a single step.  You go from big
+      to small or small to big (levels of scale); you test each part
+      individually until it is good (strong centers); you make sure the
+      parts are not too disconnected from each other (non-separateness).
+      You move a few widgets where they are easier to reach, or where they
+      are closer to the data to which they refer.  You remove some frames
+      and separators to reduce clutter.  Above all, you continually evaluate
+      what you created against real users and real use cases, so that you
+      empirically test things against reality, not against castles in the
+      sky.
+    </para>
+  </section>
+
+  <section>
+    <title>A Name for the Quality</title>
+
+    <para>
+      Over the course of <citetitle>The Nature of Order</citetitle>, Alexander manages to show that
+      environments or structures that are built according to that method all
+      end up having the Quality Without A Name.  He calls this <firstterm>living
+      structure</firstterm>.  It can be measured and compared.  It no longer has no
+      name; we can now speak of environments with more or less living
+      structure than others, or of programs with more or less living
+      structure than others &mdash; and we strive to make have more of that
+      property.
+    </para>
+
+    <para>
+      I just called this essay, <citetitle>Software that has the Quality Without A
+      Name</citetitle> because it sounds more mysterious that way.
+    </para>
+
+    <para>
+      I cannot claim to know the perfect way of designing and writing
+      software now, but at least I have a good method grounded on what
+      produces good things elsewhere.  It worked for my house, and so far I
+      have seen it work very well for my software.  I hope it works well for
+      you, too!
+    </para>
+  </section>
+
+  <bibliography>
+    <title>References</title>
+
+    <biblioentry>
+      <authorgroup>
+	<author>
+	  <firstname>Christopher</firstname>
+	  <surname>Alexander</surname>
+	</author>
+	<!-- FIXME: other authors -->
+      </authorgroup>
+      <title>A Pattern Language</title>
+      <!-- FIXME: full citation -->
+    </biblioentry>
+
+    <biblioentry>
+      <author>
+	<firstname>Christopher</firstname>
+	<surname>Alexander</surname>
+      </author>
+      <title>The Nature of Order</title>
+      <!-- FIXME: full citation, list the first two books -->
+      <address>http://www.natureoforder.com/</address>
+    </biblioentry>
+
+    <biblioentry>
+      <author>
+	<firstname>Richard</firstname>
+	<othername>P.</othername>
+	<surname>Gabriel</surname>
+      </author>
+      <title>Patterns of Software</title>
+      <bibliomisc>
+	A beautiful, wide-ranging book
+	on software development, Christopher Alexander's ideas, and the search
+	for good techniques for writing software.  Online version at
+	<ulink url="http://dreamsongs.com/Files/PatternsOfSoftware.pdf">http://dreamsongs.com/Files/PatternsOfSoftware.pdf</ulink>
+      </bibliomisc>
+    </biblioentry>
+
+    <biblioentry>
+      <author>
+	<firstname>Richard</firstname>
+	<othername>P.</othername>
+	<surname>Gabriel</surname>
+      </author>
+      <title>Christopher Alexander: the search for beauty</title>
+      <bibliomisc>
+	A very good presentation of Christopher Alexander's ideas and an exposition
+	of patterns in the software world.
+	<ulink url="http://dreamsongs.com/Files/AlexanderPresentation.pdf">http://dreamsongs.com/Files/AlexanderPresentation.pdf</ulink>
+      </bibliomisc>
+    </biblioentry>
+
+    <biblioentry>
+      <author>
+	<firstname>Richard</firstname>
+	<othername>P.</othername>
+	<surname>Gabriel</surname>
+      </author>
+      <title>The Nature of Order: the post-patterns world</title>
+      <bibliomisc>
+	Another very good presentation, subsequent to the previous one, that explains
+	the Fifteen Properties of Life, the Fundamental Process, and how this
+	relates to software.  <ulink
+	  url="http://dreamsongs.com/Files/NatureOfOrder.pdf">http://dreamsongs.com/Files/NatureOfOrder.pdf</ulink>
+      </bibliomisc>
+    </biblioentry>
+    
+  </bibliography>
+
+  <!-- FIXME: biblioentries for the following -->
+
+<!-- Photos and drawings of the fifteen properties of life &mdash; -->
+<!-- http://www.livingneighborhoods.org/ht-0/fifteen.htm -->
+
+
+
+</article>
