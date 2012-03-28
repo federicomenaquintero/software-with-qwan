@@ -2,6 +2,11 @@ SOURCES=			\
 	software-with-qwan.xml
 
 IMAGES=					\
+	1.png				\
+	2.png				\
+	3.png				\
+	4.png				\
+	5.png
 
 SOURCE_MAIN=software-with-qwan.xml
 
@@ -18,7 +23,7 @@ all: html.stamp
 
 html.stamp: $(SOURCES) $(IMAGES)
 	mkdir -p $(OUTPUTDIR)
-	#cp $(IMAGES) $(OUTPUTDIR)/
+	cp $(IMAGES) $(OUTPUTDIR)/
 	xsltproc -o $(OUTPUTDIR)/ --stringparam html.stylesheet $(CSS) $(STYLESHEET) \
 		$(SOURCE_MAIN)
 	cp $(CSS) $(OUTPUTDIR)/
