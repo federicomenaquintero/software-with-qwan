@@ -17,6 +17,7 @@
 
     <copyright>
       <year>2011</year>
+      <year>2012</year>
       <holder>Federico Mena-Quintero</holder>
     </copyright>
 
@@ -986,10 +987,31 @@
 	  <firstname>Christopher</firstname>
 	  <surname>Alexander</surname>
 	</author>
-	<!-- FIXME: other authors -->
+	<author>
+	  <firstname>Sara</firstname>
+	  <surname>Ishikawa</surname>
+	</author>
+	<author>
+	  <firstname>Murray</firstname>
+	  <surname>Silverstein</surname>
+	</author>
+	<author>
+	  <firstname>Max</firstname>
+	  <surname>Jacobson</surname>
+	</author>
+	<author>
+	  <firstname>Ingrid</firstname>
+	  <surname>Fiksdahl-King</surname>
+	</author>
+	<author>
+	  <firstname>Shlomo</firstname>
+	  <surname>Angel</surname>
+	</author>
       </authorgroup>
       <title>A Pattern Language</title>
-      <!-- FIXME: full citation -->
+      <subtitle>Towns, Buildings, Construction</subtitle>
+      <publishername>Oxford University Press</publishername>
+      <date>1977</date>
     </biblioentry>
 
     <biblioentry>
@@ -997,8 +1019,20 @@
 	<firstname>Christopher</firstname>
 	<surname>Alexander</surname>
       </author>
-      <title>The Nature of Order</title>
-      <!-- FIXME: full citation, list the first two books -->
+      <title>The Nature of Order book one: The Phenomenon of Life</title>
+      <publishername>The Center for Enfironmental Structure</publishername>
+      <date>2002</date>
+      <address>http://www.natureoforder.com/</address>
+    </biblioentry>
+
+    <biblioentry>
+      <author>
+	<firstname>Christopher</firstname>
+	<surname>Alexander</surname>
+      </author>
+      <title>The Nature of Order book two: The Process of Creating Life</title>
+      <publishername>The Center for Enfironmental Structure</publishername>
+      <date>2002</date>
       <address>http://www.natureoforder.com/</address>
     </biblioentry>
 
@@ -1045,14 +1079,12 @@
 	  url="http://dreamsongs.com/Files/NatureOfOrder.pdf">http://dreamsongs.com/Files/NatureOfOrder.pdf</ulink>
       </bibliomisc>
     </biblioentry>
+
+    <biblioentry>
+      <title>Photos and drawings of the fifteen properties of life</title>
+      <address>http://www.livingneighborhoods.org/ht-0/fifteen.htm</address>
+    </biblioentry>
     
   </bibliography>
-
-  <!-- FIXME: biblioentries for the following -->
-
-<!-- Photos and drawings of the fifteen properties of life &mdash; -->
-<!-- http://www.livingneighborhoods.org/ht-0/fifteen.htm -->
-
-
 
 </article>
