@@ -777,6 +777,8 @@
 	  Imagine that you write a <classname>PhoneCall</classname> class.  This is a latent center,
 	  not as strong as it could be.
 	</para>
+	<graphic fileref="1.png">
+	</graphic>
       </listitem>
 
       <listitem>
@@ -784,6 +786,9 @@
 	  Gerard Meszaros, in <citetitle>Pattern: Half Object + Protocol</citetitle> suggested
 	  that you should split that into half calls tied by a protocol.
 	</para>	<!-- FIXME: citation for PHO+P -->
+
+	<graphic fileref="2.png">
+	</graphic>
 
 	<para>
 	  We attain a local symmetry, we make a strong center, and get levels of
@@ -795,6 +800,9 @@
 	<para>
 	  Now make a diagram of that:
 	</para>
+
+	<graphic fileref="3.png">
+	</graphic>
 
 	<para>
 	  You have local symmetry, levels of scale, boundaries, deep interlock
@@ -809,6 +817,9 @@
 	  the latent center in the middle?
 	</para>
 
+	<graphic fileref="4.png">
+	</graphic>
+
 	<para>
 	  You add an explicit boundary (<classname>Call</classname>) that ties the <classname>HalfCalls</classname>.  This
 	  improves the local symmetries, retains deep interlock and ambiguity,
@@ -820,6 +831,9 @@
 	<para>
 	  Yes, composable.
 	</para>
+
+	<graphic fileref="5.png">
+	</graphic>
 
 	<para>
 	  Multi-way calls, conference calls, happen all out of applying
